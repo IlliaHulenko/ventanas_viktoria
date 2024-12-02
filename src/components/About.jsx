@@ -3,6 +3,7 @@ import gsap from 'gsap'
 import React from 'react'
 
 import { ScrollTrigger } from 'gsap/all'
+import AnimatedTitle from './AnimatedTitle';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -34,12 +35,11 @@ const About = () => {
             <h2 className='font-general text-sm uppercase md:text-[10px]'>
                 Ventanas de alta calidad
             </h2>
-            
-            <div className='mt-5 text-center text-4xl uppercase leading-[0.8] 
-                md:text-[6rem]'
-            >
-                Descubre la mejor relación <br/> calidad-precio en el mercado
-            </div>
+
+            <AnimatedTitle 
+                title='Descubre la mejor relación <br/> calidad-precio en el mercado'
+                containerClass="mt-5 !text-black text-center"
+            />   
             
             <div className='about-subtext'>
                 <p>Producción rápida</p>
