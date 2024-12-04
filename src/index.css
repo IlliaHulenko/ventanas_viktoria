@@ -44,11 +44,11 @@ body {
   }
 
   .nav-hover-btn {
-    @apply relative ms-10 font-general text-xs uppercase text-blue-50 after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 dark:after:bg-white cursor-pointer;
+    @apply relative ms-10 font-general text-lg uppercase text-gray-800 after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 hover:text-blue-50 dark:after:bg-white cursor-pointer;
   }
 
   .floating-nav {
-    @apply bg-black rounded-lg border;
+    @apply bg-gray-500 rounded-lg border;
   }
 
   .absolute-center {
@@ -130,7 +130,7 @@ body {
     @apply sm:size-80 md:h-96 md:w-[25rem] rounded-lg;
   }
 
-  .sword-man-clip-path {
+  .handshake-clip-path {
     clip-path: polygon(16% 0, 89% 15%, 75% 100%, 0 97%);
   }
 

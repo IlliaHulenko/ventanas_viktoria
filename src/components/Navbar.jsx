@@ -4,7 +4,7 @@ import { GiWindow } from "react-icons/gi";
 import { useWindowScroll } from 'react-use';
 import gsap from 'gsap';
 
-const navItems = ['Ventanas', 'Puertas', 'About', 'Contacto']
+const navItems = ['Ventanas', 'Puertas', 'About', 'Contact']
 
 const Navbar = () => {
 
@@ -68,13 +68,9 @@ const Navbar = () => {
                 </a>
               ))}
             </div>
-            
-            
-
           </div>
         </nav>
-      </header>
-      
+      </header>      
     </div>
   )
 }
