@@ -51,6 +51,45 @@ body {
     @apply bg-gray-500 rounded-lg border;
   }
 
+  /* .contact-us-btn{
+    @apply w-20 h-20 bg-green-600 fixed bottom-3 left-5 flex justify-center items-center rounded-full cursor-pointer z-50;
+  } */
+
+  .contact-us-btn {
+    width: 7rem;
+    height: 4rem;
+    position: fixed;
+    bottom: 20px;
+    left: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0.7em 1.4em 0.7em 1.1em;
+    color: white;
+    background: #ad5389;
+    background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    z-index: 50;
+  }
+
+  .contact-us-btn:hover {
+    box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+  }
+
+  .contact-us-btn:active{
+    box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+  }
+
   .absolute-center {
     @apply absolute top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%];
   }

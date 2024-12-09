@@ -1,5 +1,6 @@
 {
   "name": "ventanas-viktoria",
+  "homepage": "https://illiahulenko.github.io/ventanas_viktoria/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -7,10 +8,12 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
+    "gh-pages": "^6.2.0",
     "gsap": "^3.12.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
