@@ -1,75 +1,261 @@
-export const pvc_windows = [
+// export const pvc_windows = [
 
+//     {
+//         id: 0,        
+//         title: 'Perfect Passive',
+//         type: 'PVC systems, VEKA 82',
+//         series: 'series (competitor to 80-90 mm systems)',
+//         profile: 'profile class 3 mm',
+//         passive_insulation: 'the highest thermal insulation Uf = 1.0, recommended for energy-saving and passive houses',
+//         security: 'built-in protection "anti-burglary window"',
+//         comfort_life: 'blinds integrated into the glass unit, with electronic or mechanical control (optional)',
+//         developed: 'developed and certified by the EU',
+//         img: 'img/perfect_passive.jpg',
+//         price: 'Desde 100 Euros'
+//     },
+//     {
+//         id: 1,        
+//         title: 'Perfect Balance',
+//         type: 'PVC system, VEKA76',
+//         series: 'series (competitor to 80-90 mm systems)',
+//         profile: 'profile class 3 mm',
+//         passive_insulation: 'High thermal insulation Uf=1.2, recommended for energy-efficient buildings',
+//         security: 'built-in protection "anti-burglary window"',
+//         comfort_life: 'blinds integrated into the glass unit, with electronic or mechanical control (optional)',
+//         developed: 'developed and certified by the EU',
+//         img: 'img/perfect_balance.jpg',
+//         price: 'Desde 100 Euros'
+
+//     },
+//     {
+//         id: 2,        
+//         title: 'Perfect Elegance',
+//         type: 'PVC system, VEKA70',
+//         series: 'series (competitor to 70-73 mm systems)',
+//         profile: 'profile class 3 mm',
+//         passive_insulation: 'high insulation (high thermal insulation Uf=1.3)',
+//         security: 'built-in protection "anti-burglary window"',
+//         comfort_life: 'blinds integrated into the glass unit, with electronic or mechanical control (optional)',
+//         developed: 'developed and certified by the EU',
+//         img: 'img/perfect_balance.jpg',
+//         price: 'Desde 100 Euros'
+
+//     },
+//     {
+//         id: 3,        
+//         title: 'Perfect Energy',
+//         type: 'PVC systems, WHS by VEKA',
+//         series: 'series (competitor to 70-73 mm systems)',
+//         profile: 'profile class 2.7 mm',
+//         passive_insulation: 'high insulation (high thermal insulation Uf=1.3)',
+//         security: 'built-in protection "anti-burglary window"',
+//         comfort_life: 'blinds integrated into the glass unit, with electronic or mechanical control (optional)',
+//         developed: 'developed and certified by the EU',
+//         img: 'img/perfect-energy.jpg',
+//         price: 'Desde 100 Euros'
+
+//     },
+//     {
+//         id: 4,        
+//         title: 'Perfect Exellent',
+//         type: 'PVC systems, WHS by VEKA',
+//         series: '6 series (competitor to 60 mm systems)',
+//         profile: 'profile class 2.7 mm',
+//         passive_insulation: 'high insulation (high thermal insulation Uf=1.5)',
+//         security: 'built-in protection "anti-burglary window"',
+//         comfort_life: '',
+//         developed: 'developed and certified by the EU',
+//         img: 'img/perfect-exellent.jpg',
+//         price: 'Desde 100 Euros'       
+//     }
+// ];
+
+// export const hybrid_windows = [
+//     {
+//         id: 0,        
+//         title: 'H8 AluStyle HI+/SI+',
+//         type: 'hybrid systems',
+//         series: 'series (category of 80-90 mm systems), glued double-glazed unit 48 mm, sash section width 100 mm, frame installation depth 82 mm',
+//         alu: '',
+//         glass: 'frame and sash with integrated aluminium on the outside, aluminium window design',
+//         passive_glass: '48 mm glazed double-glazed unit, recommended for passive and energy-saving buildings',
+//         hi_plus: 'high insulation (ultra-high thermal insulation Uf = 1,1)',
+//         si_plus: 'sound insulation (ultra-high sound insulation)',       
+//         security: 'built-in protection "anti-burglary window"',
+//         comfort_life: 'blinds integrated into the glass unit, with electronic or mechanical control (optional)',
+//         developed: 'developed and certified by the EU',
+//         img: 'img/H8_AluStyle.jpg',
+//         price: 'Desde 120 Euros'
+//     },
+//     {
+//         id: 1,        
+//         title: 'H8 AluGlass HI+/SI+',
+//         type: 'hybrid systems',
+//         series: 'series (category 80-90 mm systems), mounting frame depth 82 mm',
+//         alu: 'frame with integrated aluminium on the outside',
+//         glass: 'all-glass sash with integrated aluminium on the outside',
+//         passive_glass: '48 mm glazed double-glazed unit, recommended for passive and energy-saving buildings',
+//         hi_plus: 'high insulation (ultra-high thermal insulation Uf = 1,1)',
+//         si_plus: 'sound insulation (ultra-high sound insulation)',       
+//         security: 'built-in protection "anti-burglary window"',
+//         comfort_life: 'blinds integrated into the glass unit, with electronic or mechanical control (optional)',
+//         developed: 'developed and certified by the EU',
+//         img: 'img/H8_AluGlass.jpg',
+//         price: 'Desde 120 Euros'
+//     },
+//     {
+//         id: 2,        
+//         title: 'H8 Glass HI+/SI+',
+//         type: 'hybrid systems',
+//         series: 'series (category 80-90 mm systems), mounting frame depth 76 mm',
+//         alu: '',
+//         glass: 'all-glass sash with integrated aluminium on the outside, laminated or white frame',
+//         passive_glass: '48 mm glazed double-glazed unit, recommended for passive and energy-saving buildings',
+//         hi_plus: 'high insulation (ultra-high thermal insulation Uf = 1,1)',
+//         si_plus: 'sound insulation (ultra-high sound insulation)',       
+//         security: 'built-in protection "anti-burglary window"',
+//         comfort_life: 'blinds integrated into the glass unit, with electronic or mechanical control (optional)',
+//         developed: 'developed and certified by the EU',
+//         img: 'img/H8_AluGlass.jpg',
+//         price: 'Desde 120 Euros'
+//     }
+// ];
+
+// export const aluminium_windows = [
+
+//     {
+//         id: 0,        
+//         title: 'TH 68 A7',
+//         thermal_insulation: '1.6 W/m2K',
+//         tightness: '',
+//         water_resistance: '',
+//         stability_winds: '',
+//         acoustics: '',
+//         durability: '',
+//         max_size: '2,400 * 1,100 mm',
+//         max_sash_width: '1,200 mm',
+//         max_sash_weight: '120 kg',
+//         install_depth: '75 mm',
+//         max_thikness: '51 mm',
+//         img: 'img/th_68_a7.jpg',
+//         price: 'Desde 150 Euros'
+//     },
+//     {
+//         id: 1,        
+//         title: 'ML 10 A 10',
+//         thermal_insulation: '0.7 W/m2K',
+//         tightness: 'Class 4 (600 Pa)',
+//         water_resistance: 'Class E900 (900 Pa)',
+//         stability_winds: 'Class C3 (1200 Pa)',
+//         acoustics: '46(-1;-4) for TuTi, 44(-2;-4) for DC dB',
+//         durability: 'Class 3 (20,000 cycles)',
+//         max_size: '2,800 * 1,200 mm',
+//         max_sash_width: '',
+//         max_sash_weight: '200 kg',
+//         install_depth: '107 mm',
+//         max_thikness: '88 mm',
+//         img: 'img/ml_10_a_10.jpg',
+//         price: 'Desde 150 Euros'
+//     },
+//     {
+//         id: 2,        
+//         title: 'ML 8 Hi+ A8',
+//         thermal_insulation: '0.88 W/m2K',
+//         tightness: 'Class 4 (600 Pa)',
+//         water_resistance: 'Class E900 (900 Pa)',
+//         stability_winds: 'Class C3 (1200 Pa)',
+//         acoustics: '46(0;-3) for TuTi, 44(-2;-4) for DC dB',
+//         durability: 'Class 3 (20,000 cycles)',
+//         max_size: '2,800 * 1,200 mm',
+//         max_sash_width: '1,700 mm',
+//         max_sash_weight: '200 kg',
+//         install_depth: '87 mm',
+//         max_thikness: '68 mm',
+//         img: 'img/ml_8_hi_a8.jpg',
+//         price: 'Desde 150 Euros'
+//     }
+// ];
+
+
+export const windows = [
+    
     {
         id: 0,        
         title: 'Perfect Passive',
-        type: 'PVC systems, VEKA 82',
+        type: 'PVC systems',
         series: 'series (competitor to 80-90 mm systems)',
         profile: 'profile class 3 mm',
         passive_insulation: 'the highest thermal insulation Uf = 1.0, recommended for energy-saving and passive houses',
         security: 'built-in protection "anti-burglary window"',
         comfort_life: 'blinds integrated into the glass unit, with electronic or mechanical control (optional)',
         developed: 'developed and certified by the EU',
-        img: '../../public/img/perfect_passive.jpg',
-        price: 'Desde 100 Euro'        
+        img: 'img/perfect_passive.jpg',
+        price: 'Desde 100 Euro',
+        slug: 'perfect-passive',
+        description: 'Esta sistema es ideal para quienes buscan eficiencia energética y confort.'        
     },
     {
         id: 1,        
         title: 'Perfect Balance',
-        type: 'PVC system, VEKA76',
+        type: 'PVC systems',
         series: 'series (competitor to 80-90 mm systems)',
         profile: 'profile class 3 mm',
         passive_insulation: 'High thermal insulation Uf=1.2, recommended for energy-efficient buildings',
         security: 'built-in protection "anti-burglary window"',
         comfort_life: 'blinds integrated into the glass unit, with electronic or mechanical control (optional)',
         developed: 'developed and certified by the EU',
-        img: '../../public/img/perfect_balance.jpg',
-        price: 'Desde 100 Euro'        
+        img: 'img/perfect_balance.jpg',
+        price: 'Desde 100 Euro',
+        slug: 'perfect-balance',
+        description: 'El VEKA 76 Balans es una solución versátil, ideal para quienes buscan un equilibrio entre rendimiento térmico y estética.'        
     },
     {
         id: 2,        
         title: 'Perfect Elegance',
-        type: 'PVC system, VEKA70',
+        type: 'PVC systems',
         series: 'series (competitor to 70-73 mm systems)',
         profile: 'profile class 3 mm',
         passive_insulation: 'high insulation (high thermal insulation Uf=1.3)',
         security: 'built-in protection "anti-burglary window"',
         comfort_life: 'blinds integrated into the glass unit, with electronic or mechanical control (optional)',
         developed: 'developed and certified by the EU',
-        img: '../../public/img/perfect_balance.jpg',
-        price: 'Desde 100 Euro'        
+        img: 'img/perfect_balance.jpg',
+        price: 'Desde 100 Euro',
+        slug: 'perfect-elegance',
+        description: 'El VEKA Elegance 70 es ideal para proyectos que requieren una combinación de funcionalidad, eficiencia y estética tradicional.'        
     },
     {
         id: 3,        
         title: 'Perfect Energy',
-        type: 'PVC systems, WHS by VEKA',
+        type: 'PVC systems',
         series: 'series (competitor to 70-73 mm systems)',
         profile: 'profile class 2.7 mm',
         passive_insulation: 'high insulation (high thermal insulation Uf=1.3)',
         security: 'built-in protection "anti-burglary window"',
         comfort_life: 'blinds integrated into the glass unit, with electronic or mechanical control (optional)',
         developed: 'developed and certified by the EU',
-        img: '../../public/img/perfect-energy.jpg',
-        price: 'Desde 100 Euro'        
+        img: 'img/perfect-energy.jpg',
+        price: 'Desde 100 Euro',
+        slug: 'perfect-energy',
+        description: 'Los sistemas WHS by VEKA son una solución óptima para quienes buscan ventanas asequibles y de calidad, con un buen nivel de aislamiento térmico y acústico.'        
     },
     {
         id: 4,        
         title: 'Perfect Exellent',
-        type: 'PVC systems, WHS by VEKA',
+        type: 'PVC systems',
         series: '6 series (competitor to 60 mm systems)',
         profile: 'profile class 2.7 mm',
         passive_insulation: 'high insulation (high thermal insulation Uf=1.5)',
         security: 'built-in protection "anti-burglary window"',
         comfort_life: '',
         developed: 'developed and certified by the EU',
-        img: '../../public/img/perfect-exellent.jpg',
-        price: 'Desde 100 Euro'        
-    }
-];
-
-export const hybrid_windows = [
+        img: 'img/perfect-exellent.jpg',
+        price: 'Desde 100 Euro',
+        slug: 'perfect-exellent',
+        description: 'Diseño moderno y funcional, disponible en varios colores para adaptarse a diferentes estilos arquitectónicos. Los sistemas WHS by VEKA son una solución óptima para quienes buscan ventanas asequibles y de calidad, con un buen nivel de aislamiento térmico y acústico.'        
+    },
     {
-        id: 0,        
+        id: 5,        
         title: 'H8 AluStyle HI+/SI+',
         type: 'hybrid systems',
         series: 'series (category of 80-90 mm systems), glued double-glazed unit 48 mm, sash section width 100 mm, frame installation depth 82 mm',
@@ -81,11 +267,13 @@ export const hybrid_windows = [
         security: 'built-in protection "anti-burglary window"',
         comfort_life: 'blinds integrated into the glass unit, with electronic or mechanical control (optional)',
         developed: 'developed and certified by the EU',
-        img: '../../public/img/H8_AluStyle.jpg',
-        price: 'Desde 120 Euro'
+        img: 'img/H8_AluStyle.jpg',
+        price: 'Desde 120 Euro',
+        slug: 'h8-alustyle',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
     {
-        id: 1,        
+        id: 6,        
         title: 'H8 AluGlass HI+/SI+',
         type: 'hybrid systems',
         series: 'series (category 80-90 mm systems), mounting frame depth 82 mm',
@@ -97,11 +285,13 @@ export const hybrid_windows = [
         security: 'built-in protection "anti-burglary window"',
         comfort_life: 'blinds integrated into the glass unit, with electronic or mechanical control (optional)',
         developed: 'developed and certified by the EU',
-        img: '../../public/img/H8_AluGlass.jpg',
-        price: 'Desde 120 Euro'
+        img: 'img/H8_AluGlass.jpg',
+        price: 'Desde 120 Euro',
+        slug: 'h8-aluglass',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
     {
-        id: 2,        
+        id: 7,        
         title: 'H8 Glass HI+/SI+',
         type: 'hybrid systems',
         series: 'series (category 80-90 mm systems), mounting frame depth 76 mm',
@@ -113,16 +303,15 @@ export const hybrid_windows = [
         security: 'built-in protection "anti-burglary window"',
         comfort_life: 'blinds integrated into the glass unit, with electronic or mechanical control (optional)',
         developed: 'developed and certified by the EU',
-        img: '../../public/img/H8_AluGlass.jpg',
-        price: 'Desde 120 Euro'
-    }
-];
-
-export const aluminium_windows = [
-
+        img: 'img/H8_AluGlass.jpg',
+        price: 'Desde 120 Euro',
+        slug: 'h8-glass',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+    },
     {
-        id: 0,        
+        id: 8,        
         title: 'TH 68 A7',
+        type: 'aluminium systems',
         thermal_insulation: '1.6 W/m2K',
         tightness: '',
         water_resistance: '',
@@ -134,12 +323,15 @@ export const aluminium_windows = [
         max_sash_weight: '120 kg',
         install_depth: '75 mm',
         max_thikness: '51 mm',
-        img: '../../public/img/th_68_a7.jpg',
-        price: 'Desde 150 Euro'
+        img: 'img/th_68_a7.jpg',
+        price: 'Desde 150 Euro',
+        slug: 'th-68-a7',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
     {
-        id: 1,        
+        id: 9,        
         title: 'ML 10 A 10',
+        type: 'aluminium systems',
         thermal_insulation: '0.7 W/m2K',
         tightness: 'Class 4 (600 Pa)',
         water_resistance: 'Class E900 (900 Pa)',
@@ -151,12 +343,15 @@ export const aluminium_windows = [
         max_sash_weight: '200 kg',
         install_depth: '107 mm',
         max_thikness: '88 mm',
-        img: '../../public/img/ml_10_a_10.jpg',
-        price: 'Desde 150 Euro'
+        img: 'img/ml_10_a_10.jpg',
+        price: 'Desde 150 Euro',
+        slug: 'ml10-a10',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
     {
-        id: 2,        
+        id: 10,        
         title: 'ML 8 Hi+ A8',
+        type: 'aluminium systems',
         thermal_insulation: '0.88 W/m2K',
         tightness: 'Class 4 (600 Pa)',
         water_resistance: 'Class E900 (900 Pa)',
@@ -168,7 +363,10 @@ export const aluminium_windows = [
         max_sash_weight: '200 kg',
         install_depth: '87 mm',
         max_thikness: '68 mm',
-        img: '../../public/img/ml_8_hi_a8.jpg',
-        price: 'Desde 150 Euro'
+        img: 'img/ml_8_hi_a8.jpg',
+        price: 'Desde 150 Euro',
+        slug: 'ml8-a8',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     }
+   
 ];

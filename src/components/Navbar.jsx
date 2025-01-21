@@ -4,7 +4,7 @@ import { GiWindow } from "react-icons/gi";
 import { useWindowScroll } from 'react-use';
 import gsap from 'gsap';
 
-const navItems = ['Ventanas', 'Puertas', 'About', 'Contact']
+const navItems = ['Inicio', 'Nosotros', 'Ventajas', 'Ventanas', 'Contactos']
 
 const Navbar = () => {
 
@@ -88,12 +88,13 @@ const Navbar = () => {
         </header>
       </div>
       {/* Contact Us button */}
-      <div     
+      <a     
         ref={contactButtonRef}    
         className='contact-us-btn'
+        href='#footer'
       >
-          <span className='absolute'>Contact Us</span>
-      </div>
+          <span className='absolute'>Le llamaremos</span>
+      </a>
       
     </>
   )

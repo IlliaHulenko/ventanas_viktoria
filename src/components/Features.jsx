@@ -13,7 +13,7 @@ const BentoCard = ({ src, title, description}) => {
                 className='absolute left-0 top-0 size-full object-cover object-center'
             />
             <div
-                className='relative z-10 flex size-full flex-col justify-between p-5 text-blue-700'
+                className='relative z-10 flex size-full flex-col justify-between p-5 text-2xl text-blue-800'
             >
                 <div>
                     <h1 className='bento-title special-font'>
@@ -21,7 +21,7 @@ const BentoCard = ({ src, title, description}) => {
                     </h1>
                     {description && (
                         <p
-                            className='mt-3 max-w-64 text-sm md:text-lg'
+                            className='mt-5 max-w-md text-xl md:text-3xl italic'
                         >
                             {description}
                         </p>
@@ -78,24 +78,20 @@ const Features = () => {
     <section className='bg-black pb-52'>
         <div className='container mx-auto px-3 md:px-10'>
             <div className='px-5 py-32'>
-                <p className='font-circular-web text-lg text-blue-50'>
-                    Nuestras características son:
+                <p className='font-circular-web text-3xl text-blue-50'>
+                Ventanas de PVC: La Solución Perfecta para tu Hogar
                 </p>
                 <p className='max-w-md font-circular-web text-lg text-blue-50 opacity-50'>
-                    Fabricación a medida, instalación y venta de ventanas  y cerramientos de aluminio y PVC .
-                    No existe proyecto que no podamos ejecutar, profesionales cualificados para el asesoramiento de cada caso.
-                    Ventanas oscilobatientes, correderas y abatibles de calidad al mejor precio.
+                Si estás buscando mejorar la eficiencia energética, el confort y el diseño de tu hogar, las ventanas de PVC son la opción ideal. En esta guía te explicamos por qué elegir ventanas de PVC puede ser la mejor decisión para tu hogar y cómo puedes beneficiarte de nuestras ofertas exclusivas.
+
                 </p>
             </div>        
 
             <BentoTilt className='border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]'>
                 <BentoCard 
                     src="videos/windows.mp4"
-                    title="Gama completa de productos"
-                    description="Ofrecemos una gama completa de soluciones para 
-                        cada proyecto: estructuras de aluminio, estructuras de PVC y 
-                        sistemas híbridos. Esto permite a los promotores obtener todas 
-                        las soluciones necesarias de un solo socio"
+                    title="Eficiencia Energética"
+                    description="Las ventanas de PVC ofrecen un aislamiento térmico excepcional, ayudando a mantener tu hogar cálido en invierno y fresco en verano. Gracias a su estructura multicámara, las ventanas de PVC reducen significativamente la pérdida de calor, lo que se traduce en un menor consumo energético y, por ende, en facturas de energía más bajas."
                 />
             </BentoTilt>
 
