@@ -8,7 +8,7 @@ const links =[
 ]
 const Footer = () => {
   return (
-    <div className='w-screen bg-gray-500 py-4 text-black'>
+    <div id='footer' className='w-screen bg-gray-500 py-4 text-black'>
         <div 
             className='container mx-auto flex flex-col items-center justify-around gap-4 px-4 md:flex-row'
         >

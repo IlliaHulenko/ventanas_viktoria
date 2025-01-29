@@ -11,7 +11,7 @@
 //         comfort_life: 'blinds integrated into the glass unit, with electronic or mechanical control (optional)',
 //         developed: 'developed and certified by the EU',
 //         img: 'img/perfect_passive.jpg',
-//         price: 'Desde 100 Euros'
+//         price: 'Desde 100 €s'
 //     },
 //     {
 //         id: 1,        
@@ -24,7 +24,7 @@
 //         comfort_life: 'blinds integrated into the glass unit, with electronic or mechanical control (optional)',
 //         developed: 'developed and certified by the EU',
 //         img: 'img/perfect_balance.jpg',
-//         price: 'Desde 100 Euros'
+//         price: 'Desde 100 €s'
 
 //     },
 //     {
@@ -38,7 +38,7 @@
 //         comfort_life: 'blinds integrated into the glass unit, with electronic or mechanical control (optional)',
 //         developed: 'developed and certified by the EU',
 //         img: 'img/perfect_balance.jpg',
-//         price: 'Desde 100 Euros'
+//         price: 'Desde 100 €s'
 
 //     },
 //     {
@@ -52,7 +52,7 @@
 //         comfort_life: 'blinds integrated into the glass unit, with electronic or mechanical control (optional)',
 //         developed: 'developed and certified by the EU',
 //         img: 'img/perfect-energy.jpg',
-//         price: 'Desde 100 Euros'
+//         price: 'Desde 100 €s'
 
 //     },
 //     {
@@ -66,7 +66,7 @@
 //         comfort_life: '',
 //         developed: 'developed and certified by the EU',
 //         img: 'img/perfect-exellent.jpg',
-//         price: 'Desde 100 Euros'       
+//         price: 'Desde 100 €s'       
 //     }
 // ];
 
@@ -85,7 +85,7 @@
 //         comfort_life: 'blinds integrated into the glass unit, with electronic or mechanical control (optional)',
 //         developed: 'developed and certified by the EU',
 //         img: 'img/H8_AluStyle.jpg',
-//         price: 'Desde 120 Euros'
+//         price: 'Desde 120 €s'
 //     },
 //     {
 //         id: 1,        
@@ -101,7 +101,7 @@
 //         comfort_life: 'blinds integrated into the glass unit, with electronic or mechanical control (optional)',
 //         developed: 'developed and certified by the EU',
 //         img: 'img/H8_AluGlass.jpg',
-//         price: 'Desde 120 Euros'
+//         price: 'Desde 120 €s'
 //     },
 //     {
 //         id: 2,        
@@ -117,7 +117,7 @@
 //         comfort_life: 'blinds integrated into the glass unit, with electronic or mechanical control (optional)',
 //         developed: 'developed and certified by the EU',
 //         img: 'img/H8_AluGlass.jpg',
-//         price: 'Desde 120 Euros'
+//         price: 'Desde 120 €s'
 //     }
 // ];
 
@@ -138,7 +138,7 @@
 //         install_depth: '75 mm',
 //         max_thikness: '51 mm',
 //         img: 'img/th_68_a7.jpg',
-//         price: 'Desde 150 Euros'
+//         price: 'Desde 150 €s'
 //     },
 //     {
 //         id: 1,        
@@ -155,7 +155,7 @@
 //         install_depth: '107 mm',
 //         max_thikness: '88 mm',
 //         img: 'img/ml_10_a_10.jpg',
-//         price: 'Desde 150 Euros'
+//         price: 'Desde 150 €s'
 //     },
 //     {
 //         id: 2,        
@@ -172,7 +172,7 @@
 //         install_depth: '87 mm',
 //         max_thikness: '68 mm',
 //         img: 'img/ml_8_hi_a8.jpg',
-//         price: 'Desde 150 Euros'
+//         price: 'Desde 150 €s'
 //     }
 // ];
 
@@ -190,7 +190,7 @@ export const windows = [
         comfort_life: 'blinds integrated into the glass unit, with electronic or mechanical control (optional)',
         developed: 'developed and certified by the EU',
         img: 'img/perfect_passive.jpg',
-        price: 'Desde 100 Euro',
+        price: 'Desde 100 €',
         slug: 'perfect-passive',
         description: 'Esta sistema es ideal para quienes buscan eficiencia energética y confort.'        
     },
@@ -205,7 +205,7 @@ export const windows = [
         comfort_life: 'blinds integrated into the glass unit, with electronic or mechanical control (optional)',
         developed: 'developed and certified by the EU',
         img: 'img/perfect_balance.jpg',
-        price: 'Desde 100 Euro',
+        price: 'Desde 100 €',
         slug: 'perfect-balance',
         description: 'El VEKA 76 Balans es una solución versátil, ideal para quienes buscan un equilibrio entre rendimiento térmico y estética.'        
     },
@@ -220,7 +220,7 @@ export const windows = [
         comfort_life: 'blinds integrated into the glass unit, with electronic or mechanical control (optional)',
         developed: 'developed and certified by the EU',
         img: 'img/perfect_balance.jpg',
-        price: 'Desde 100 Euro',
+        price: 'Desde 100 €',
         slug: 'perfect-elegance',
         description: 'El VEKA Elegance 70 es ideal para proyectos que requieren una combinación de funcionalidad, eficiencia y estética tradicional.'        
     },
@@ -235,7 +235,7 @@ export const windows = [
         comfort_life: 'blinds integrated into the glass unit, with electronic or mechanical control (optional)',
         developed: 'developed and certified by the EU',
         img: 'img/perfect-energy.jpg',
-        price: 'Desde 100 Euro',
+        price: 'Desde 100 €',
         slug: 'perfect-energy',
         description: 'Los sistemas WHS by VEKA son una solución óptima para quienes buscan ventanas asequibles y de calidad, con un buen nivel de aislamiento térmico y acústico.'        
     },
@@ -250,7 +250,7 @@ export const windows = [
         comfort_life: '',
         developed: 'developed and certified by the EU',
         img: 'img/perfect-exellent.jpg',
-        price: 'Desde 100 Euro',
+        price: 'Desde 100 €',
         slug: 'perfect-exellent',
         description: 'Diseño moderno y funcional, disponible en varios colores para adaptarse a diferentes estilos arquitectónicos. Los sistemas WHS by VEKA son una solución óptima para quienes buscan ventanas asequibles y de calidad, con un buen nivel de aislamiento térmico y acústico.'        
     },
@@ -268,7 +268,7 @@ export const windows = [
         comfort_life: 'blinds integrated into the glass unit, with electronic or mechanical control (optional)',
         developed: 'developed and certified by the EU',
         img: 'img/H8_AluStyle.jpg',
-        price: 'Desde 120 Euro',
+        price: 'Desde 120 €',
         slug: 'h8-alustyle',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
@@ -286,7 +286,7 @@ export const windows = [
         comfort_life: 'blinds integrated into the glass unit, with electronic or mechanical control (optional)',
         developed: 'developed and certified by the EU',
         img: 'img/H8_AluGlass.jpg',
-        price: 'Desde 120 Euro',
+        price: 'Desde 120 €',
         slug: 'h8-aluglass',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
@@ -304,7 +304,7 @@ export const windows = [
         comfort_life: 'blinds integrated into the glass unit, with electronic or mechanical control (optional)',
         developed: 'developed and certified by the EU',
         img: 'img/H8_AluGlass.jpg',
-        price: 'Desde 120 Euro',
+        price: 'Desde 120 €',
         slug: 'h8-glass',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
@@ -324,7 +324,7 @@ export const windows = [
         install_depth: '75 mm',
         max_thikness: '51 mm',
         img: 'img/th_68_a7.jpg',
-        price: 'Desde 150 Euro',
+        price: 'Desde 150 €',
         slug: 'th-68-a7',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
@@ -344,7 +344,7 @@ export const windows = [
         install_depth: '107 mm',
         max_thikness: '88 mm',
         img: 'img/ml_10_a_10.jpg',
-        price: 'Desde 150 Euro',
+        price: 'Desde 150 €',
         slug: 'ml10-a10',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     },
@@ -364,7 +364,7 @@ export const windows = [
         install_depth: '87 mm',
         max_thikness: '68 mm',
         img: 'img/ml_8_hi_a8.jpg',
-        price: 'Desde 150 Euro',
+        price: 'Desde 150 €',
         slug: 'ml8-a8',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
     }

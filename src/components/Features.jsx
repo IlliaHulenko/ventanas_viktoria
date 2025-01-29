@@ -4,7 +4,7 @@ import { RiServiceLine } from "react-icons/ri";
 
 const BentoCard = ({ src, title, description}) => {
     return(
-        <div className='relative size-full'>
+        <div id='ventajas' className='relative size-full'>
             <video 
                 src={src}
                 loop

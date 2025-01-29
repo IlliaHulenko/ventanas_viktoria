@@ -4,6 +4,8 @@ import { GiWindow } from "react-icons/gi";
 import { useWindowScroll } from 'react-use';
 import gsap from 'gsap';
 
+import { Link } from 'react-router-dom';
+
 const navItems = ['Inicio', 'Nosotros', 'Ventajas', 'Ventanas', 'Contactos']
 
 const Navbar = () => {
@@ -63,24 +65,26 @@ const Navbar = () => {
             {/* Navbar's left side */}
             <div className='flex items-center gap-7'>
               <img src='/img/logo.svg' alt='logo' className='w-10'/>
-              <Button 
-                id="product-button"
-                title="Productos"
-                rightIcon={<GiWindow />} 
-                containerClass="bg-blue-50 md:flex hidden items-center justify-center gap-1"
-              />
+              <Link to="/products">
+                <Button 
+                  id="product-button"
+                  title="Productos"
+                  rightIcon={<GiWindow />} 
+                  containerClass="bg-blue-50 md:flex hidden items-center justify-center gap-1"
+                />
+              </Link>
             </div>
             {/* Navbar's right side */}
             <div className='flex h-full items-center'>            
               <div className='hidden md:block'>
                 {navItems.map((item) => (
-                  <a 
+                  <Link
                     key={item} 
-                    href={`#${item.toLowerCase()}`}
+                    to={`${item.toLowerCase()}`}
                     className='nav-hover-btn'
                   >
                     {item}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>

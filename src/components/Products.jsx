@@ -4,8 +4,8 @@ import ProductCart from './ProductCart.jsx';
 import { windows } from '../constants/index';
 
 const Products = () => {
-    
   return (
+        
     <div className='mt-14 mb-12'>
         <div className='container mx-auto'>
             <div className='text-center mb-10 max-w-[80%] mx-auto'>
@@ -28,7 +28,10 @@ const Products = () => {
                                     lg:grid-cols-3 place-items-center gap-5 py-5 w-full'>
                     {/* Card's section */}
                     {windows.map((card, id) => (
-                            <ProductCart key={id} card={card} />
+                            <ProductCart 
+                                key={id} 
+                                card={card}                                    
+                            />
                     ))}                    
                 </div>
             </div>           
