@@ -65,7 +65,7 @@
 
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import React, { useEffect, useRef } from 'react'; // Import useEffect and useRef
+import React, { useRef } from 'react';
 
 import { ScrollTrigger } from 'gsap/all';
 import AnimatedTitle from './AnimatedTitle';

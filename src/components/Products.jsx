@@ -3,6 +3,7 @@ import AnimatedTitle from './AnimatedTitle';
 import ProductCart from './ProductCart.jsx';
 import { windows } from '../constants/index';
 
+
 const Products = () => {
   return (
         

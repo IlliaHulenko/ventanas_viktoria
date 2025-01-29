@@ -1,13 +1,8 @@
 import React from 'react'
-
 import Navbar from './components/Navbar'
-
 import Products from './components/Products'
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
-import Home from './components/Home'
 import ProductDetail from './components/ProductDetail'
-import ScrollRestoration from './components/ScrollRestoration'
-
 import Hero from './components/Hero'
 import About from './components/About'
 import Features from './components/Features'
@@ -19,20 +14,11 @@ const App = () => {
   return (
     <main className='relative min-h-screen w-screen overflow-x-hidden overflow-y-auto flex flex-col'>
 
-      {/* <Navbar />
-      <section id='inicio'><Hero /></section>
-      <section id='nosotros'><About /></section>
-      <section id='ventajas'><Features /></section>
-      <section id='ventanas'><Products/></section>
-      <section id='contactos'><Contact /></section>
-      <section id='footer'><Footer /></section>   */}
-
       <Router>
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
+        <Routes>          
           <Route
-            path='/inicio'
+            path='/'
             element={
               <>
                 <Hero />

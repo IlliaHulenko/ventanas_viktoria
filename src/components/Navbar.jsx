@@ -6,8 +6,6 @@ import gsap from 'gsap';
 
 import { Link } from 'react-router-dom';
 
-const navItems = ['Inicio', 'Nosotros', 'Ventajas', 'Ventanas', 'Contactos']
-
 const Navbar = () => {
 
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -77,15 +75,11 @@ const Navbar = () => {
             {/* Navbar's right side */}
             <div className='flex h-full items-center'>            
               <div className='hidden md:block'>
-                {navItems.map((item) => (
-                  <Link
-                    key={item} 
-                    to={`${item.toLowerCase()}`}
-                    className='nav-hover-btn'
-                  >
-                    {item}
-                  </Link>
-                ))}
+                <Link to="/" className='nav-hover-btn'>Inicio</Link>
+                <Link to="/nosotros" className='nav-hover-btn'>Nosotros</Link>
+                <Link to="/ventajas" className='nav-hover-btn'>Ventajas</Link>
+                <Link to="/ventanas" className='nav-hover-btn'>Ventanas</Link>
+                <Link to="/contactos" className='nav-hover-btn'>Contactos</Link>
               </div>
             </div>
           </nav>
