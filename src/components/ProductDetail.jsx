@@ -35,6 +35,7 @@ const ProductDetail = () => {
                     <option>100×120 cm</option>
                     <option>120×120 cm </option>
                     <option>150×150 cm</option>
+                    <option>Otro tamaño</option>
                   </select>
                   <span className="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-4 h-4" viewBox="0 0 24 24">
@@ -46,8 +47,7 @@ const ProductDetail = () => {
             </div>
             <div className="flex">
               <span className="title-font font-medium text-2xl text-gray-900">{product.price}</span>
-              <button className="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">Solicitar precio</button>
-              
+              <button className="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">Solicitar precio</button>              
             </div>
           </div>
         </div>

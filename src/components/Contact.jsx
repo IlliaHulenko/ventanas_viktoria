@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from './Button'
 import AnimatedTitle from './AnimatedTitle'
+import ContactForm from './ContactForm'
 
 const ImageClipBox = ({src, clipClass}) => (
   <div className={clipClass}>
@@ -58,8 +59,9 @@ const Contact = () => {
           />
         </div>
 
+      </div>      
 
-      </div>
+        <ContactForm />
     </div>
   )
 }

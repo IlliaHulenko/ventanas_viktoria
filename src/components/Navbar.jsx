@@ -62,11 +62,13 @@ const Navbar = () => {
           <nav className='flex size-full items-center justify-between p-4'>
             {/* Navbar's left side */}
             <div className='flex items-center gap-7'>
-              <img src='/img/logo.svg' alt='logo' className='w-10'/>
+              <Link to='/'>
+                <img src='/img/logo.svg' alt='logo' className='w-10'/>
+              </Link>
               <Link to="/products">
                 <Button 
                   id="product-button"
-                  title="Productos"
+                  title="Ventanas"
                   rightIcon={<GiWindow />} 
                   containerClass="bg-blue-50 md:flex hidden items-center justify-center gap-1"
                 />
@@ -78,7 +80,7 @@ const Navbar = () => {
                 <Link to="/" className='nav-hover-btn'>Inicio</Link>
                 <Link to="/nosotros" className='nav-hover-btn'>Nosotros</Link>
                 <Link to="/ventajas" className='nav-hover-btn'>Ventajas</Link>
-                <Link to="/ventanas" className='nav-hover-btn'>Ventanas</Link>
+                {/* <Link to="/ventanas" className='nav-hover-btn'>Ventanas</Link> */}
                 <Link to="/contactos" className='nav-hover-btn'>Contactos</Link>
               </div>
             </div>
