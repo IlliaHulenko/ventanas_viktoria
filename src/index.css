@@ -128,9 +128,21 @@ body {
     @apply flex flex-col gap-1 text-7xl uppercase leading-[.8] text-white sm:px-32 md:text-[6rem];
   }
 
+  .animated-paragraph{
+    @apply flex flex-col gap-3 text-2xl leading-[.8] text-purple-800 sm:px-12 md:text-xl;
+  }
+
   .animated-word {
     @apply special-font font-zentry font-black opacity-0;
     transform: translate3d(10px, 51px, -60px) rotateY(60deg) rotateX(-40deg);
+    transform-origin: 50% 50% -150px !important;
+    will-change: opacity, transform;
+  }
+
+  .animated-word-paragraph {
+    @apply special-font font-general font-black opacity-0;
+    /* transform: translate3d(10px, 51px, -60px) rotateY(-180deg) rotateX(80deg);     */
+    transform: translateX(10px) rotate(90deg) translateY(500px);
     transform-origin: 50% 50% -150px !important;
     will-change: opacity, transform;
   }
@@ -208,10 +220,8 @@ body {
       height: 4px;
       transform: translateY(-0px);
     }
-  }
-  
-  /* From Uiverse.io by G4b413l */
-  /* https://uiverse.io/G4b413l/tidy-walrus-92 */
+  }  
+ 
   .three-body {
     --uib-size: 35px;
     --uib-speed: 0.8s;
@@ -277,63 +287,8 @@ body {
     top: 0;
     left: 0;
     animation: wobble2 var(--uib-speed) infinite ease-in-out;
-  }
+  } 
 
-  /* Modal */
-  .modal-overlay{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-    opacity: 0;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .modals{
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    width: 500px;
-    max-width: 100%;
-    transform: translateY(-500px);
-    transition: all 0.3s ease-in-out;
-    opacity: 0;
-  }
-
-  .show-overlay{
-    opacity: 1;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .show-modal{
-    opacity: 1;
-    transform: translateY(0);
-    transition: all 0.3s ease-in-out;
-  }
-
-  .modal-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .modal-close-button{
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    position: absolute;
-    float: right;
-    right: 2px;
-    top: 5px;
-  }
-  
 
   @keyframes spin78236 {
     0% {

@@ -58,7 +58,6 @@ const Contact = () => {
             containerClass='mt-10 cursor-pointer'
           />
         </div>
-
       </div>      
 
         <ContactForm />

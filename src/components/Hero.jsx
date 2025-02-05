@@ -139,7 +139,7 @@ const Hero = () => {
                 />
             </div>
             <h1 className='special-font hero-heading absolute bottom-5 right-5 z-40 text-blue-75'>
-                Ventanas Viktoria
+                Viktoria Ventanas
             </h1>
             <div className='absolute left-0 top-0 size-full z-40'>
                 <div className='mt-24 px-5 sm:px-10'>
@@ -161,7 +161,7 @@ const Hero = () => {
             </div>
         </div>
         <h1 className='special-font hero-heading absolute bottom-5 right-5 text-black'>
-            Ventanas Viktoria
+            Viktoria Ventanas
         </h1>
     </div>
   )

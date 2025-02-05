@@ -13,9 +13,9 @@ const BentoCard = ({ src, title, description}) => {
                 className='absolute left-0 top-0 size-full object-cover object-center'
             />
             <div
-                className='relative z-10 flex size-full flex-col justify-between p-5 text-2xl text-blue-800'
+                className='relative z-10 flex size-full flex-col justify-center items-center p-5 text-2xl text-blue-100'
             >
-                <div>
+                <div className='bg-gray-500/55 p-5 rounded-lg'>
                     <h1 className='bento-title special-font'>
                         {title}
                     </h1>
@@ -78,12 +78,14 @@ const Features = () => {
     <section className='bg-black pb-52'>
         <div className='container mx-auto px-3 md:px-10'>
             <div className='px-5 py-32'>
-                <p className='font-circular-web text-3xl text-blue-50'>
+                <p className='font-circular-web text-3xl text-blue-50 mb-3'>
                 Ventanas de PVC: La Solución Perfecta para tu Hogar
                 </p>
-                <p className='max-w-md font-circular-web text-lg text-blue-50 opacity-50'>
-                Si estás buscando mejorar la eficiencia energética, el confort y el diseño de tu hogar, las ventanas de PVC son la opción ideal. En esta guía te explicamos por qué elegir ventanas de PVC puede ser la mejor decisión para tu hogar y cómo puedes beneficiarte de nuestras ofertas exclusivas.
-
+                <p className='max-w-md font-circular-web text-lg text-blue-100 opacity-50'>
+                    Si estás buscando mejorar la eficiencia energética, el confort y el diseño de tu hogar, 
+                    las ventanas de PVC son la opción ideal. En esta guía te explicamos por qué elegir ventanas 
+                    de PVC puede ser la mejor decisión para tu hogar y cómo puedes beneficiarte de nuestras 
+                    ofertas exclusivas.
                 </p>
             </div>        
 
@@ -116,7 +118,7 @@ const Features = () => {
                 <BentoTilt className='bento-tilt_1 me-14 md:col-span-1 md:me-0'>
                     <BentoCard 
                         src="videos/fabric.mp4"
-                        title="productos de alta calidad"
+                        title="Productos de alta calidad"
                         description="Gestión perfecta de la calidad el sistema de calidad de todos los procesos basado en Lean Production garantiza la alta calidad de nuestros productos y servicios"
                     />
                 </BentoTilt>
@@ -141,11 +143,17 @@ const Features = () => {
                         autoPlay
                         className='size-full object-cover object-center'
                     />
-                </BentoTilt>
+                </BentoTilt>               
 
             </div>
 
-            
+            <BentoTilt className='border-hsla relative mt-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]'>
+                <BentoCard 
+                    src="videos/window-5.mp4"
+                    title="Algún texto muy importante"
+                    description="La información muy importante para ganchar un cliente"
+                />
+            </BentoTilt>
 
         </div>
     </section>
