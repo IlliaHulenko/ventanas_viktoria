@@ -8,6 +8,7 @@ import About from './components/About'
 import Features from './components/Features'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import WindowsPage from './pages/windowsPage'
 
 const App = () => {
 
@@ -20,11 +21,12 @@ const App = () => {
           <Route
             path='/'
             element={
-              <>
-                <Hero />
+              <>                
                 <ScrollableContent> {/* Wrap scrollable content */}
+                  <Hero />
                   <About />
                   <Features />
+                  <WindowsPage />
                   <Contact />
                   <Footer />
                 </ScrollableContent>
@@ -33,6 +35,7 @@ const App = () => {
           />
           <Route path='/nosotros' element={<About />} />
           <Route path='/ventajas' element={<Features />} />
+          <Route path='/ventanas' element={<WindowsPage />} />
           <Route path='/contactos' element={<Contact />} />
           <Route path='/footer' element={<Footer />} />
           <Route path='/products' element={<Products />} />
@@ -40,13 +43,6 @@ const App = () => {
         </Routes>
       </Router>
     </main>
-
-    // <Route path='/inicio' element={<Hero />} />
-    // <Route path='/nosotros' element={<About />} />
-    // <Route path='/ventajas' element={<Features />} />
-    // <Route path='/contactos' element={<Contact />} />
-    // <Route path='/footer' element={<Footer />} /> 
-
   )
 }
 

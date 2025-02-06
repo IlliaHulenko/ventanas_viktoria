@@ -63,17 +63,7 @@ const About = () => {
                     <AnimatedParagraph 
                         paragraph='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam perferendis minima dolores excepturi, <br/> dolor doloribus voluptates sequi veritatis explicabo temporibus animi inventore  quam possimus, odio asperiores molestias expedita. Eaque, veritatis.'
                         containerClass='absolute left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2 text-center'
-                    />
-                    {/* <div 
-                        className='absolute left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2 
-                        size-fit bg-gray-500/55 rounded-lg p-10 text-center text-blue-100'
-                    >
-                        <p className='font-general text-3xl'>Lorem ipsum dolor sit amet consectetur 
-                            adipisicing elit. Aliquam perferendis minima dolores excepturi, dolor 
-                            doloribus voluptates sequi veritatis explicabo temporibus animi inventore 
-                            quam possimus, odio asperiores molestias expedita. Eaque, veritatis.
-                        </p>
-                    </div> */}
+                    />                    
                 </div>
             </div>
         </div>

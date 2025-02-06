@@ -30,11 +30,7 @@ const Contact = () => {
 
         <div 
           className='absolute -top-40 left-20 w-60 sm:top-1/2 md:left-auto md:right-10 lg:top-20 lg:w-80'        
-        >
-          {/* <ImageClipBox 
-            src='img/phone-1.png' 
-            clipClass='absolute md:scale-125' 
-          />   */}
+        >          
           <ImageClipBox 
             src='img/phone.jpg' 
             clipClass='handshake-clip-path md:scale-125' 
@@ -48,15 +44,7 @@ const Contact = () => {
           <AnimatedTitle 
             title='Contar el precio de sus ventanas y cerramientos de PVC y aluminio.'
             containerClass='special-font mt-10 w-full font-zentry text-5xl leading-[0.9] md:text-[5rem]'
-          />
-          {/* <p className='special-font mt-10 w-full font-zentry text-5xl leading-[0.9] md:text-[5rem]'>
-            Contar el precio de sus ventanas y cerramientos de PVC y aluminio.
-          </p> */}
-
-          <Button 
-            title='Contactanos'
-            containerClass='mt-10 cursor-pointer'
-          />
+          />                   
         </div>
       </div>      
 

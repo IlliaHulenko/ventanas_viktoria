@@ -1,31 +1,45 @@
 import React from 'react'
-import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import { PiHeadsetBold } from "react-icons/pi";
+import { HiOutlineMail } from "react-icons/hi";
 
 const Footer = () => {
+
+    const handleScroll = (sectionId) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <footer id='footer' className='w-screen bg-gray-500 py-4 text-black flex flex-col items-center justify-around'>
             <div
                 className='container mx-auto flex flex-col items-center justify-around gap-6 px-4 py-4 md:flex-row'
             >
-                <div className='flex flex-row items-center justify-between gap-4 text-2xl md:text-xl sm:py-4'>
-                    <PiHeadsetBold className='text-3xl text-blue-800' />
-                    <p>+34 123 456 789</p>
+                <div className='flex flex-col items-cstart justify-between gap-6 text-2xl md:text-xl sm:py-4'>
+                    <div className='flex flex-row gap-2'>
+                        <PiHeadsetBold className='text-3xl text-blue-800' />
+                        <a href='tel:+34 123 456 789'>+34 123 456 789</a>
+                    </div>
+                    <div className='flex flex-row gap-2'>
+                        <HiOutlineMail className='text-3xl text-red-800' />
+                        <a href='mailto:ViktoriaVentanas@gmail.com'>ViktoriaVentanas@gmail.com</a>
+                    </div>
                 </div>
                 <div>
                     <h2 className='text-xl md:text-2xl font-bold mb-4'>Navegación rápida</h2>
                     <ul className='flex flex-col gap-4 md:text-xl sm:text-lg '>
                         <li className='relative group'>
-                            <Link to="/" className='hover:scale-125 text-gray-300 cursor-pointer'>Inicio</Link>
+                            <Link to="/" onClick={() => handleScroll('inicio')} className='hover:scale-125 text-gray-300 cursor-pointer'>Inicio</Link>
                             <span className="absolute -bottom-1 left-0 w-0 h-1 bg-white transition-all group-hover:w-full"></span>
                         </li>
                         <li className='relative group'>
-                            <Link to="/nosotros" className='text-gray-300 cursor-pointer'>Sobre nosotros</Link>
+                            <Link to="/nosotros" onClick={() => handleScroll('nosotros')} className='text-gray-300 cursor-pointer'>Sobre nosotros</Link>
                             <span className="absolute -bottom-1 left-0 w-0 h-1 bg-white transition-all group-hover:w-full"></span>
                         </li>
                         <li className='relative group'>
-                            <Link to="/ventajas" className='text-gray-300 cursor-pointer'>Nuestras ventajas</Link>
+                            <Link to="/ventajas" onClick={() => handleScroll('ventajas')} className='text-gray-300 cursor-pointer'>Nuestras ventajas</Link>
                             <span className="absolute -bottom-1 left-0 w-0 h-1 bg-white transition-all group-hover:w-full"></span>
                         </li>
                         <li className='relative group'>
@@ -37,15 +51,7 @@ const Footer = () => {
 
                 <div className='flex flex-col items-center justify-start md:justify-center gap-4 sm:items-center mb-4 '>
                     <h2 className='text-xl font-bold mb-4'>Siguenos en nuestras redes:</h2>
-                    <div className='flex flex-row gap-6'>
-
-                        {/* <a href='https://www.facebook.com/' className='text-black transition hover:text-blue-700 hover:scale-125 duration-500 ease-in-out text-3xl'>
-                            <FaFacebook />
-                        </a>
-                        <a href='https://www.twitter.com/' className='text-black transition hover:text-blue-300 hover:scale-125 duration-500 ease-in-out text-3xl'>
-                            <FaTwitter />
-                        </a>
-                         */}                        
+                    <div className='flex flex-row gap-6'>                     
 
                         <a href='https://www.facebook.com/' className="w-10 h-10 flex items-center justify-center relative overflow-hidden rounded-full bg-white shadow-md shadow-gray-200 group transition-all duration-300 hover:scale-125">
                             <svg className="relative z-10 fill-gray-900 transition-all duration-300 group-hover:fill-white " xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 72 72" fill="none">

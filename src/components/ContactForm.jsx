@@ -122,7 +122,9 @@ const ContactForm = () => {
                         rightIcon={<RiMailSendLine />}
                         containerClass='bg-gradient-to-r from-[#287233] to-[#07dfd9] text-white 
                             focus:ring-4 focus:outline-none focus:ring-blue-300 font-large rounded-lg 
-                            px-5 py-2.5 text-center flex items-center justify-center gap-3 md:w-[40%] sm:w-full h-14'
+                            px-5 py-2.5 text-center flex items-center justify-center gap-3 md:w-[40%] sm:w-full h-14
+                            drop-shadow-md hover:drop-shadow-xl ease-out hover:translate-y-1 transition-all rounded
+                            '
                         onFocus={handleFocus}
                         onBlur={handleBlur}
                         disabled={isLoading}
