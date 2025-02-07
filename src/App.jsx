@@ -13,7 +13,7 @@ import WindowsPage from './pages/windowsPage'
 const App = () => {
 
   return (
-    <main className='relative min-h-screen w-screen overflow-x-hidden overflow-y-auto flex flex-col'>
+    <main className='relative flex flex-col min-h-screen w-screen overflow-x-hidden overflow-y-auto '>
 
       <Router>
         <Navbar />

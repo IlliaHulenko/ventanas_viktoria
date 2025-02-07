@@ -1,7 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { windows } from '../constants';
 import { useParams } from "react-router-dom";
 import Footer from './Footer';
+// import { Link } from 'react-router-dom';
+import Modal from './Modal';
+import ContactForm from './ContactForm';
+
 
 
 const ProductDetail = () => {
@@ -9,14 +13,15 @@ const ProductDetail = () => {
   const { slug } = useParams();
   const product = windows.find((product) => product.slug === slug);
 
+  const [open, setOpen] = useState(false);
+
   // TODO: 404 Page
   if (!product) return <h1>Product Not Found</h1>;
 
   return (
-    <>
-
-      <section className="text-gray-700 body-font h-full sm:h-auto bg-white">
-        <div className="container md:container-lg px-2 py-48 mx-auto">
+    
+      <section className="text-gray-700 body-font h-vh sm:h-auto bg-white">
+        <div className="container flex px-2 py-48 mx-auto">
           <div className="lg:w-4/5 mx-auto flex flex-wrap">
             <img src={`/public/${product?.img}`} alt={product.title} className="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200"  />
             <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
@@ -26,9 +31,9 @@ const ProductDetail = () => {
               <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
                 <div className="flex">
                   <span className="mr-3">Color</span>
-                  <button className="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></button>
-                  <button className="border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"></button>
-                  <button className="border-2 border-gray-300 ml-1 bg-red-500 rounded-full w-6 h-6 focus:outline-none"></button>
+                  <div className="border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none"></div>
+                  <div className="border-2 border-gray-300 ml-1 bg-gray-700 rounded-full w-6 h-6 focus:outline-none"></div>
+                  <div className="border-2 border-gray-300 ml-1 bg-red-500 rounded-full w-6 h-6 focus:outline-none"></div>
                 </div>
                 <div className="flex ml-6 items-center">
                   <span className="mr-3">Size</span>
@@ -50,14 +55,32 @@ const ProductDetail = () => {
               </div>
               <div className="flex">
                 <span className="title-font font-medium text-2xl text-gray-900">{product.price}</span>
-                <button className="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded">Solicitar precio</button>              
+                {/* <Link
+                  to="/contactos"
+                  className="flex ml-auto"
+                >
+                  <button 
+                    onClick={() => setOpen(true)}
+                    className="text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded"
+                  >
+                    Solicitar precio
+                  </button>
+                </Link> */}
+                <div className='flex ml-auto'>
+                  <button 
+                      onClick={() => setOpen(true)}
+                      className="text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded cursor-pointer"
+                    >
+                      Solicitar precio
+                    </button>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <Modal open={open} onClose={() => setOpen(false)} children={<ContactForm />} />
+        <Footer />
       </section>
-      <Footer />
-    </>
   )
 }
 

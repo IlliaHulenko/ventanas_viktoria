@@ -13,7 +13,7 @@ const Footer = () => {
     };
 
     return (
-        <footer id='footer' className='w-screen bg-gray-500 py-4 text-black flex flex-col items-center justify-around'>
+        <footer id='footer' className='w-screen relative bg-gray-500 py-4 text-black flex flex-col items-center justify-around'>
             <div
                 className='container mx-auto flex flex-col items-center justify-around gap-6 px-4 py-4 md:flex-row'
             >
