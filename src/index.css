@@ -49,11 +49,11 @@ body {
   }
 
   .nav-hover-btn {
-    @apply relative ms-10 font-general text-lg uppercase text-gray-800 after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 hover:text-blue-50 dark:after:bg-white cursor-pointer;
+    @apply relative ms-10 font-general text-2xl uppercase text-[#287233] font-bold after:absolute after:-bottom-0.5 after:left-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-neutral-800 after:transition-transform after:duration-300 after:ease-[cubic-bezier(0.65_0.05_0.36_1)] hover:after:origin-bottom-left hover:after:scale-x-100 hover:text-[#0018a8] dark:after:bg-[#FFD100] cursor-pointer;
   }
 
   .floating-nav {
-    @apply bg-gray-500 rounded-lg border;
+    @apply backdrop-blur-md rounded-sm;
   }
 
   /* .contact-us-btn{
@@ -129,7 +129,7 @@ body {
   }
 
   .animated-paragraph{
-    @apply flex flex-col gap-3 text-2xl leading-[.8] text-purple-800 sm:px-12 md:text-xl;
+    @apply flex flex-col gap-3 text-2xl leading-[.8] text-[#287233] sm:px-12 md:text-xl;
   }
 
   .animated-word {

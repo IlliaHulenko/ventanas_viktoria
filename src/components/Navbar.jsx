@@ -3,7 +3,8 @@ import Button from './Button';
 import { GiWindow } from "react-icons/gi";
 import { useWindowScroll } from 'react-use';
 import gsap from 'gsap';
-
+import MenuSvg from '../assets/svg/MenuSvg';
+import HamburgerMenu from './HamburgerMenu';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
@@ -23,6 +24,24 @@ const Navbar = () => {
   const navContainerRef = useRef(null);  
 
   const contactButtonRef = useRef(null);
+
+  // NavBar changes
+  const [openNavigation, setOpenNavigation] = useState(false);
+
+  const toggleNavigation = () => {
+    if (openNavigation) {
+      setOpenNavigation(false);      
+    } else {
+      setOpenNavigation(true);      
+    }
+  };
+
+  const handleClick = () => {
+    if (!openNavigation) return;
+
+    setOpenNavigation(false);
+  };
+
 
   useEffect(() => {
     if(currentScrollY === 0 ){
@@ -91,6 +110,7 @@ const Navbar = () => {
                 <Link onClick={() => handleScroll('contactos')} className='nav-hover-btn'>Contactos</Link>
               </div>
             </div>
+            <HamburgerMenu />
           </nav>
         </header>
       </div>
