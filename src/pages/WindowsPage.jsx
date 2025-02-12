@@ -140,7 +140,7 @@ const WindowsPage = () => {
                 <div className="col-span-6 row-span-1 md:col-span-1 md:col-start-7 md:row-span-2 md:row-start-4 place-items-start self-center">
                     <p className='p-4 text-lg font-robert-medium text-blue-600'>de 5651 Euro(+ IVA)</p>
                 </div>
-            </div>
+            </div>             
             
             <Link to="/products" className='flex justify-center m-8 w-full'>
                 <Button 

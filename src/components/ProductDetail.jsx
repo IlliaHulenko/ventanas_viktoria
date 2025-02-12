@@ -54,18 +54,7 @@ const ProductDetail = () => {
                 </div>
               </div>
               <div className="flex">
-                <span className="title-font font-medium text-2xl text-gray-900">{product.price}</span>
-                {/* <Link
-                  to="/contactos"
-                  className="flex ml-auto"
-                >
-                  <button 
-                    onClick={() => setOpen(true)}
-                    className="text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded"
-                  >
-                    Solicitar precio
-                  </button>
-                </Link> */}
+                <span className="title-font font-medium text-2xl text-gray-900">{product.price}</span>                
                 <div className='flex ml-auto'>
                   <button 
                       onClick={() => setOpen(true)}
