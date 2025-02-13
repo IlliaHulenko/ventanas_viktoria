@@ -6,28 +6,35 @@ on:
       - main
 
 jobs:
-  build:
-    name: Build
+  build-deploy:    
     runs-on: ubuntu-latest
 
     steps:
+        #Checkout repo
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Setup Node
+        #Setup Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v3
+        with:
+          node-version: 18
 
+        #Install dependencies
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+        run: npm install        
 
+        #Build project
       - name: Build project
         run: npm run build
 
-      - name: Upload production-ready build files
-        uses: actions/upload-artifact@v4
+        #Deploy to GitHub pages
+      - name: Deploy to github-pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          name: production-files
-          path: ./dist
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: dist
+        
 
   deploy:
     name: Deploy
@@ -37,7 +44,7 @@ jobs:
 
     steps:
       - name: Download artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v3
         with:
           name: production-files
           path: ./dist
