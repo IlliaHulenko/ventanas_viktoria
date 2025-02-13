@@ -149,7 +149,7 @@ const Features = () => {
 
             <BentoTilt className='border-hsla relative mt-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]'>
                 <BentoCard 
-                    src="videos/window-5.mp4"
+                    src="videos/window-6.mp4"
                     title="Algún texto muy importante"
                     description="La información muy importante para ganchar un cliente"
                 />

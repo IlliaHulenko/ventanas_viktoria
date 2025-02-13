@@ -15,7 +15,7 @@ const App = () => {
   return (
     <main className='relative flex flex-col min-h-screen w-screen overflow-x-hidden overflow-y-auto '>
 
-      <Router basename='/ventanas_viktoria/'>
+      <Router basename={import.meta.env.BASE_URL}>
         <Navbar />
         <Routes>          
           <Route
