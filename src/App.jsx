@@ -8,7 +8,7 @@ import About from './components/About'
 import Features from './components/Features'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import WindowsPage from './pages/windowsPage'
+import WindowsPage from './components/WindowsPage'
 
 const App = () => {
 
