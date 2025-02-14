@@ -1,76 +1,7 @@
 import React, { useRef, useState } from 'react'
+import BentoCard from './BentoCard'
+import BentoTilt from './BentoTilt'
 
-
-const BentoCard = ({ src, title, description}) => {
-    return(
-        <div id='ventajas' className='relative size-full'>
-            <video 
-                src={src}
-                loop
-                muted
-                autoPlay
-                className='absolute left-0 top-0 size-full object-cover object-center'
-            />
-            <div
-                className='relative z-10 flex size-full flex-col justify-center items-center p-5 text-2xl text-blue-100'
-            >
-                <div className='bg-gray-500/55 p-3 md:p-6 rounded-lg'>
-                    <h1 className='bento-title special-font'>
-                        {title}
-                    </h1>
-                    {description && (
-                        <p
-                            className='mt-1 md:mt-3max-w-md text-lg md:text-3xl italic'
-                        >
-                            {description}
-                        </p>
-                    )}
-                </div>
-            </div>
-            
-        </div>
-    )
-}
-
-const BentoTilt = ({ children, className = ''}) => {
-
-    const [transformStyle, setTransformStyle] = useState('');
-
-    const itemRef = useRef();
-
-    const handleMouseMove = (event) => {
-        if (!itemRef.current) return;
-    
-        const { left, top, width, height } =
-          itemRef.current.getBoundingClientRect();
-    
-        const relativeX = (event.clientX - left) / width;
-        const relativeY = (event.clientY - top) / height;
-    
-        const tiltX = (relativeY - 0.5) * 10;
-        const tiltY = (relativeX - 0.5) * -10;
-    
-        const newTransform = `perspective(700px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(.95, .95, .95)`;
-        setTransformStyle(newTransform);
-    };
-
-    const handleMouseLeave = (e) => {
-        setTransformStyle('');
-    }
-
-
-    return(
-        <div 
-            ref={itemRef}
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
-            style={{transform: transformStyle}}
-            className={className}
-        >
-            {children}
-        </div>
-    )
-}
 
 const Features = () => {
   return (

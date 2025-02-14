@@ -19,7 +19,11 @@ const ProductCart = ({card}) => {
             className='w-full h-full flex flex-col justify-between items-center'            
         >
             <img 
-                src={img} 
+                src={
+                    Array.isArray(img) && img.length > 0 
+                      ? `${import.meta.env.BASE_URL}/${img[0]}` 
+                      : `${import.meta.env.BASE_URL}/${img}`
+                  } 
                 alt={title} 
                 className='h-min-[220px] w-min-[220px] object-cover'            
             />
