@@ -147,16 +147,16 @@ const Hero = () => {
                         CE
                     </h1>
                     <p className='mb-5 max-w-64 font-robert-regular text-blue-100'>
-                    Los componentes de alta calidad certificados en la Unión Europea <br/>
-                    garantizan la calidad, durabilidad y alto rendimiento de nuestras estructuras
+                        Los componentes de alta calidad certificados en la Unión Europea <br/>
+                        garantizan la calidad, durabilidad y alto rendimiento de nuestras estructuras
                     </p>
                     {/* TODO: Verify name of an ID and change Title */}
-                    <Button 
+                    {/* <Button 
                         id='watch-trailer' 
                         title='Ver más' 
                         leftIcon={<TiLocationArrow />} 
                         containerClass="bg-yellow-300 flex-center gap-1"
-                    />
+                    /> */}
                 </div>
             </div>
         </div>

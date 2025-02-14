@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react'
-import { RiServiceLine } from "react-icons/ri";
 
 
 const BentoCard = ({ src, title, description}) => {
@@ -15,13 +14,13 @@ const BentoCard = ({ src, title, description}) => {
             <div
                 className='relative z-10 flex size-full flex-col justify-center items-center p-5 text-2xl text-blue-100'
             >
-                <div className='bg-gray-500/55 p-5 rounded-lg'>
+                <div className='bg-gray-500/55 p-3 md:p-6 rounded-lg'>
                     <h1 className='bento-title special-font'>
                         {title}
                     </h1>
                     {description && (
                         <p
-                            className='mt-5 max-w-md text-xl md:text-3xl italic'
+                            className='mt-1 md:mt-3max-w-md text-lg md:text-3xl italic'
                         >
                             {description}
                         </p>
@@ -96,8 +95,8 @@ const Features = () => {
                     description="Las ventanas de PVC ofrecen un aislamiento térmico excepcional, ayudando a mantener tu hogar cálido en invierno y fresco en verano. Gracias a su estructura multicámara, las ventanas de PVC reducen significativamente la pérdida de calor, lo que se traduce en un menor consumo energético y, por ende, en facturas de energía más bajas."
                 />
             </BentoTilt>
-
-            <div className='grid h-[135vh] grid-cols-2 grid-rows-3 gap-7'>
+            
+            <div className='grid h-[135vh] grid-cols-2 grid-rows-2 gap-7'>
                 
                 <BentoTilt className='bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2'>
                     <BentoCard 
@@ -107,7 +106,7 @@ const Features = () => {
                     />
                 </BentoTilt>  
 
-                <BentoTilt className='bento-tilt_1 row-span-1 ms-32 md:col-span-1 md:ms-0'>
+                <BentoTilt className='bento-tilt_1 row-span-1 ms-14 md:col-span-1 md:ms-0'>
                     <BentoCard 
                         src="videos/opened_window_1.mp4"
                         title="Entrega a un cliente"
@@ -123,7 +122,7 @@ const Features = () => {
                     />
                 </BentoTilt>
 
-                <BentoTilt className='bento-tilt_2'>
+                {/* <BentoTilt className='bento-tilt_2'>
                     <div className='flex size-full flex-col justify-between bg-violet-300 p-5'>
                         <h1 
                             className='bento-title special-font max-w-64 text-black'
@@ -143,15 +142,15 @@ const Features = () => {
                         autoPlay
                         className='size-full object-cover object-center'
                     />
-                </BentoTilt>               
+                </BentoTilt>                */}
 
             </div>
 
             <BentoTilt className='border-hsla relative mt-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]'>
                 <BentoCard 
-                    src="videos/window-6.mp4"
-                    title="Algún texto muy importante"
-                    description="La información muy importante para ganchar un cliente"
+                    src="videos/window-5.mp4"
+                    title="Su comodidad es nuestra prioridad" 
+                    description=""
                 />
             </BentoTilt>
 

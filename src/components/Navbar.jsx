@@ -129,6 +129,9 @@ const Navbar = () => {
               <Link onClick={() => handleScroll('ventajas')} className={'links'}>
                 <p className='links-text'>Ventajas</p>
               </Link>
+              <Link to={'/products'} className={'links'}>
+                <p className='links-text'>Productos</p>
+              </Link>
               <Link onClick={() => handleScroll('ventanas')} className={'links'}>
                 <p className='links-text'>Ventanas</p>
               </Link>

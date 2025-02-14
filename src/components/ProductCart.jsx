@@ -29,7 +29,7 @@ const ProductCart = ({card}) => {
             <h4 className='capitalize'>{title}</h4>
             <p>{type}</p>                                        
         </div>
-        <p>{price}</p>
+        {/* <p>{price}</p> */}
     </Link>
   )
 }

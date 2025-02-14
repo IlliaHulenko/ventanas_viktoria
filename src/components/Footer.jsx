@@ -20,7 +20,7 @@ const Footer = () => {
                 <div className='flex flex-col items-cstart justify-between gap-6 text-2xl md:text-xl sm:py-4'>
                     <div className='flex flex-row gap-2'>
                         <PiHeadsetBold className='text-3xl text-blue-800' />
-                        <a href='tel:+34 123 456 789'>+34 123 456 789</a>
+                        <a href='tel:+34 643 733 066'>+34 643 733 066</a>
                     </div>
                     <div className='flex flex-row gap-2'>
                         <HiOutlineMail className='text-3xl text-red-800' />
