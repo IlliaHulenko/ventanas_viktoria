@@ -1,19 +1,35 @@
-import React from 'react'
-import { Link } from "react-router-dom";
+import React, { useEffect } from 'react'
+import {useNavigate} from "react-router-dom";
+
 
 const ProductCart = ({card}) => {
 
     const { title, img, type, price, id, slug } = card;
     
+    const navigator = useNavigate();
+
+    function routeToTemp() {
+        if(!document.startViewTransition) {
+            navigator(`/products/${slug}`);
+            return;
+        }
+
+        document.startViewTransition(()=> navigator(`/products/${slug}`))
+    }
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
+    
   return (
-    <Link 
-        key={id}
-        to={`/products/${slug}`}
+    <div 
+        key={id}        
         className='flex flex-col cursor-pointer bg-white 
         justify-center items-center py-4 px-5 text-center mt-1 rounded-tl-[35px]
         rounded-br-[35px] shadow-2xl md:min-h-[350px] w-full cart-item-div max-w-screen-md
         min-h-[260px]
         '
+        onClick={routeToTemp}
     >
         <div            
             className='w-full h-full flex flex-col justify-between items-center'            
@@ -34,7 +50,7 @@ const ProductCart = ({card}) => {
             <p>{type}</p>                                        
         </div>
         {/* <p>{price}</p> */}
-    </Link>
+    </div>
   )
 }
 

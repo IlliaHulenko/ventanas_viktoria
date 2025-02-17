@@ -1,11 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { windows } from '../constants';
 import { useParams } from "react-router-dom";
 import Footer from './Footer';
 import Modal from './Modal';
 import ContactForm from './ContactForm';
-import BentoCard from './BentoCard';
-import BentoTilt from './BentoTilt';
+import Page404 from './Page404';
 
 
 const ProductDetail = () => {
@@ -13,10 +12,13 @@ const ProductDetail = () => {
   const { slug } = useParams();
   const product = windows.find((product) => product.slug === slug);
 
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);  
+  
+  if (!product) return <Page404 />;
 
-  // TODO: 404 Page
-  if (!product) return <h1>Product Not Found</h1>;
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  })
 
   return (
     <section className="text-gray-700 body-font overflow-hidden sm:h-auto bg-gray-200">
@@ -288,7 +290,7 @@ const ProductDetail = () => {
                   <p className="leading-relaxed ml-2 w-3/4">{product.height_max}</p>
                 </div>
               }
-              
+
 
               {/* Common windows specifications which render conditionaly */}
               {product.developed &&
@@ -323,19 +325,19 @@ const ProductDetail = () => {
 
             {Array.isArray(product?.img) && product.img.length > 0 && (
               <div className='flex flex-col sm:flex-row flex-wrap gap-3'>
-                  {product.img.map((image, index) => (
-                    <img 
-                      key={index} 
-                      src={`${import.meta.env.BASE_URL}/${image}`} 
-                      alt={product.title} 
-                      className="w-full max-w-xs md:max-w-md rounded-lg hover:scale-110 duration-500 ease-in cursor-pointer" 
-                    />
-                  ))}
+                {product.img.map((image, index) => (
+                  <img
+                    key={index}
+                    src={`${import.meta.env.BASE_URL}/${image}`}
+                    alt={product.title}
+                    className="w-full max-w-xs md:max-w-md rounded-lg hover:scale-110 duration-500 ease-in cursor-pointer"
+                  />
+                ))}
               </div>
             )}
           </div>
           <div className="flex flex-col mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
-              <span className="mr-3 mb-3 font-general text-lg md:text-2xl">Laminación de los sistemas de perfil:</span>
+            <span className="mr-3 mb-3 font-general text-lg md:text-2xl">Laminación de los sistemas de perfil:</span>
             <div className="flex items-center flex-wrap">
 
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">

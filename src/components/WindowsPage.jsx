@@ -1,8 +1,21 @@
 import React from 'react'
 import Button from './Button'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const WindowsPage = () => {
+
+    // Animated route to products page
+      const navigator = useNavigate();
+    
+      function routeToProducts() {
+        if (!document.startViewTransition) {
+          navigator('/products');
+          return;
+        }
+    
+        document.startViewTransition(() => navigator('/products'))
+      }
+
     return (
         <section id='ventanas' className='flex flex-col justify-center items-center my-5 p-10'>
             <h1 className='text-2xl md:text-4xl font-general m-8 '>Nuestras ventanas</h1>
@@ -150,17 +163,19 @@ const WindowsPage = () => {
                 </div>
             </div>             
             
-            <Link to="/products" className='flex justify-center m-8 w-full'>
+            <div                 
+                onClick={routeToProducts}
+                className='flex justify-center m-8 w-full'
+            >
                 <Button 
                     containerClass='bg-gradient-to-r from-[#287233] to-[#07dfd9] text-white 
                     focus:ring-4 focus:outline-none focus:ring-blue-300 font-large rounded-lg 
                     px-5 py-2.5 text-center flex items-center justify-center gap-3 md:w-[40%] sm:w-full h-14
                     drop-shadow-md hover:drop-shadow-xl ease-out hover:translate-y-1 transition-all rounded
-                    '
-                    link={'/products'} 
+                    '                     
                     title={'Ver todos los productos'}
                 />            
-            </Link>
+            </div>
             
         </section>
     )

@@ -9,6 +9,7 @@ import Features from './components/Features'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import WindowsPage from './components/WindowsPage'
+import Page404 from './components/Page404'
 
 const App = () => {
 
@@ -40,6 +41,7 @@ const App = () => {
           <Route path='/footer' element={<Footer />} />
           <Route path='/products' element={<Products />} />
           <Route path='/products/:slug' element={<ProductDetail />} />
+          <Route path='*' element={<Page404 />} />
         </Routes>
       </Router>
     </main>

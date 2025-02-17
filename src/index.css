@@ -55,7 +55,7 @@ body {
   .floating-nav {
     background-color: transparent;
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px);
   }
 
   .contact-us-btn {
@@ -331,11 +331,11 @@ body {
 
   .hamburger-menu {
     height: 4.5rem;
-    width: 4.5rem;    
+    width: 4.5rem;
     position: absolute;
     top: 0;
     right: 0;
-    bottom: 0;    
+    bottom: 0;
     margin-top: 1rem;
     margin-right: 2rem;
     display: none;
@@ -383,11 +383,11 @@ body {
   .side-panel {
     display: flex;
     flex-direction: column;
-    position: absolute;    
+    position: absolute;
     top: 0;
     left: 0;
     width: 80%;
-    height: calc(90vh - 80px);    
+    height: calc(90vh - 80px);
     background-color: transparent;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -451,10 +451,41 @@ body {
 
     .floating-nav {
       background-color: none;
-      backdrop-filter: none;     
+      backdrop-filter: none;
     }
 
   }
 
+  @view-transition {
+    navigation: auto;
+  }
+
+  ::view-transition-old(root) {
+    animation: 0.8s ease-in-out both move-out;
+  }
+
+  ::view-transition-new(root) {
+    animation: 0.8s ease-in-out both move-in;
+  }
+
+  @keyframes move-out {
+    from {
+      transform: translateX(0%);
+    }
+
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes move-in {
+    from {
+      transform: translateX(100%);
+    }
+
+    to {
+      transform: translateX(0%);
+    }
+  }
 
 }

@@ -3,7 +3,7 @@ import Button from './Button';
 import { GiWindow } from "react-icons/gi";
 import { useWindowScroll } from 'react-use';
 import gsap from 'gsap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -14,6 +14,19 @@ const Navbar = () => {
     }
   };
 
+  // Animated route to products page
+  const navigator = useNavigate();
+
+  function routeToProducts() {
+    if (!document.startViewTransition) {
+      navigator('/products');
+      return;
+    }
+
+    document.startViewTransition(() => navigator('/products'))
+  }
+
+  // Appearing and desappering logic of a navbar
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [isContactButtonVisible, setIsContactButtonVisible] = useState(true);
@@ -32,8 +45,8 @@ const Navbar = () => {
   useEffect(() => {
     let handler = document.addEventListener('click', (e) => {
       if (e.target !== menuRef.current && e.target !== hamburgerRef.current) {
-        setIsOpen(false);        
-      }      
+        setIsOpen(false);
+      }
     });
     return () => {
       document.removeEventListener('click', handler);
@@ -89,14 +102,14 @@ const Navbar = () => {
               <Link to='/' className='flex items-center w-fit h-fit bg-gradient-to-r from-[#287233] to-[#07dfd9] rounded-lg'>
                 <img src={import.meta.env.BASE_URL + '/img/logo_viktoria_ventanas.png'} alt='logo' className='w-20' />
               </Link>
-              <Link to="/products">
+              <div onClick={routeToProducts}>
                 <Button
                   id="product-button"
                   title="Productos"
                   rightIcon={<GiWindow />}
-                  containerClass="bg-blue-50 md:flex hidden items-center justify-center gap-1"
+                  containerClass="bg-blue-50 md:flex hidden items-center justify-center gap-1"                  
                 />
-              </Link>
+              </div>
             </div>
             {/* Navbar's right side */}
             <div className='flex h-full items-center'>
