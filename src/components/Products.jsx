@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import AnimatedTitle from './AnimatedTitle';
 import ProductCart from './ProductCart.jsx';
 import { windows } from '../constants/index';

@@ -1,12 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react';
 import Button from './Button';
-import { GiWindow } from "react-icons/gi";
+import { GiWindow } from 'react-icons/gi';
 import { useWindowScroll } from 'react-use';
 import gsap from 'gsap';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
-
   const handleScroll = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -23,36 +22,38 @@ const Navbar = () => {
       return;
     }
 
-    document.startViewTransition(() => navigator('/products'))
+    document.startViewTransition(() => navigator('/products'));
   }
 
-  // Appearing and desappering logic of a navbar
+  // Appearing and disappearing logic of a navbar
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [isContactButtonVisible, setIsContactButtonVisible] = useState(true);
   const { y: currentScrollY } = useWindowScroll();
 
   const navContainerRef = useRef(null);
-
   const contactButtonRef = useRef(null);
 
-  // NavBar changes
+  // NavBar changes (hamburger menu)
   const [isOpen, setIsOpen] = useState(false);
-
   const hamburgerRef = useRef();
   const menuRef = useRef();
 
+  // Get the current route
+  const location = useLocation();
+  const isProductPage = location.pathname === '/products' || location.pathname.startsWith('/products/');
+
   useEffect(() => {
-    let handler = document.addEventListener('click', (e) => {
+    const handler = (e) => {
       if (e.target !== menuRef.current && e.target !== hamburgerRef.current) {
         setIsOpen(false);
       }
-    });
+    };
+    document.addEventListener('click', handler);
     return () => {
       document.removeEventListener('click', handler);
-    }
-  }, [])
-
+    };
+  }, []);
 
   useEffect(() => {
     if (currentScrollY === 0) {
@@ -79,52 +80,95 @@ const Navbar = () => {
     gsap.to(navContainerRef.current, {
       y: isNavVisible ? 0 : -100,
       opacity: isNavVisible ? 1 : 0,
-      duration: 0.5
-    })
+      duration: 0.5,
+    });
     gsap.to(contactButtonRef.current, {
       x: isContactButtonVisible ? 0 : -100,
       opacity: isContactButtonVisible ? 1 : 0,
-      duration: 0.7
-    })
+      duration: 0.7,
+    });
   }, [isNavVisible, isContactButtonVisible]);
 
   return (
     <>
       <div
         ref={navContainerRef}
-        className='fixed inset-x-0 top-4 z-50 h-16 border-none transition-all 
-          duration-700 sm:inset-x-6'
+        className="fixed inset-x-0 top-4 z-50 h-16 border-none transition-all 
+          duration-700 sm:inset-x-6"
       >
-        <header className='absolute top-1/2 w-full -translate-y-1/2'>
-          <nav className='flex size-full items-center justify-between p-4'>
+        <header className="absolute top-1/2 w-full -translate-y-1/2">
+          <nav className="flex size-full items-center justify-between p-4">
             {/* Navbar's left side */}
-            <div className='flex items-center gap-7'>
-              <Link to='/' className='flex items-center w-fit h-fit bg-gradient-to-r from-[#287233] to-[#07dfd9] rounded-lg'>
-                <img src={import.meta.env.BASE_URL + '/img/logo_viktoria_ventanas.png'} alt='logo' className='w-20' />
-              </Link>
-              <div onClick={routeToProducts}>
-                <Button
-                  id="product-button"
-                  title="Productos"
-                  rightIcon={<GiWindow />}
-                  containerClass="bg-blue-50 md:flex hidden items-center justify-center gap-1"                  
+            <div className="flex items-center gap-7">
+              <Link
+                to="/"
+                className="flex items-center w-fit h-fit bg-gradient-to-r from-[#287233] to-[#07dfd9] rounded-lg"
+              >
+                <img
+                  src={import.meta.env.BASE_URL + '/img/logo_viktoria_ventanas.png'}
+                  alt="logo"
+                  className="w-20"
                 />
-              </div>
+              </Link>
+              {!isProductPage && (
+                <div onClick={routeToProducts}>
+                  <Button
+                    id="product-button"
+                    title="Productos"
+                    rightIcon={<GiWindow />}
+                    containerClass="bg-blue-50 md:flex hidden items-center justify-center gap-1 rounded-lg"
+                  />
+                </div>
+              )}
             </div>
             {/* Navbar's right side */}
-            <div className='flex h-full items-center'>
-              <div className='hidden md:block'>
-                <Link to="/" className='nav-hover-btn' onClick={() => handleScroll('inicio')}>Inicio</Link>
-                <Link onClick={() => handleScroll('nosotros')} className='nav-hover-btn'>Nosotros</Link>
-                <Link onClick={() => handleScroll('ventajas')} className='nav-hover-btn'>Ventajas</Link>
-                <Link onClick={() => handleScroll('ventanas')} className='nav-hover-btn'>Ventanas</Link>
-                <Link onClick={() => handleScroll('contactos')} className='nav-hover-btn'>Contactos</Link>
-              </div>
+            <div className="flex h-full items-center">
+              {!isProductPage ? (
+                <div className="hidden md:block">
+                  <Link
+                    to="/"
+                    className="nav-hover-btn"
+                    onClick={() => handleScroll('inicio')}
+                  >
+                    Inicio
+                  </Link>
+                  <Link
+                    onClick={() => handleScroll('nosotros')}
+                    className="nav-hover-btn"
+                  >
+                    Nosotros
+                  </Link>
+                  <Link
+                    onClick={() => handleScroll('ventajas')}
+                    className="nav-hover-btn"
+                  >
+                    Ventajas
+                  </Link>
+                  <Link
+                    onClick={() => handleScroll('ventanas')}
+                    className="nav-hover-btn"
+                  >
+                    Ventanas
+                  </Link>
+                  <Link
+                    onClick={() => handleScroll('contactos')}
+                    className="nav-hover-btn"
+                  >
+                    Contactos
+                  </Link>
+                </div>
+              ) : (
+                <div className="hidden md:block">
+                  <Link to="/" className="nav-hover-btn">
+                    Inicio
+                  </Link>
+                </div>
+              )}
             </div>
           </nav>
           <div
             className={`hamburger-menu ${isOpen ? 'active' : ''}`}
-            onClick={() => setIsOpen(prev => !prev)}
+            onClick={() => setIsOpen((prev) => !prev)}
             ref={hamburgerRef}
           >
             <span></span>
@@ -132,40 +176,55 @@ const Navbar = () => {
             <span></span>
           </div>
           {isOpen && (
-            <div className='side-panel' ref={menuRef}>
-              <Link to='/' onClick={() => handleScroll('inicio')} className={'links'}>
-                <p className='links-text'>Inicio</p>
+            <div className="side-panel" ref={menuRef}>
+              <Link
+                to="/"
+                onClick={() => handleScroll('inicio')}
+                className={'links'}
+              >
+                <p className="links-text">Inicio</p>
               </Link>
-              <Link onClick={() => handleScroll('nosotros')} className={'links'}>
-                <p className='links-text'>Nosotros</p>
-              </Link>
-              <Link onClick={() => handleScroll('ventajas')} className={'links'}>
-                <p className='links-text'>Ventajas</p>
-              </Link>
-              <Link to={'/products'} className={'links'}>
-                <p className='links-text'>Productos</p>
-              </Link>
-              <Link onClick={() => handleScroll('ventanas')} className={'links'}>
-                <p className='links-text'>Ventanas</p>
-              </Link>
-              <Link onClick={() => handleScroll('contactos')} className={'links'}>
-                <p className='links-text'>Contactos</p>
-              </Link>
+              {!isProductPage && (
+                <>
+                  <Link
+                    onClick={() => handleScroll('nosotros')}
+                    className={'links'}
+                  >
+                    <p className="links-text">Nosotros</p>
+                  </Link>
+                  <Link
+                    onClick={() => handleScroll('ventajas')}
+                    className={'links'}
+                  >
+                    <p className="links-text">Ventajas</p>
+                  </Link>
+                  <Link to={'/products'} className={'links'}>
+                    <p className="links-text">Productos</p>
+                  </Link>
+                  <Link
+                    onClick={() => handleScroll('ventanas')}
+                    className={'links'}
+                  >
+                    <p className="links-text">Ventanas</p>
+                  </Link>
+                  <Link
+                    onClick={() => handleScroll('contactos')}
+                    className={'links'}
+                  >
+                    <p className="links-text">Contactos</p>
+                  </Link>
+                </>
+              )}
             </div>
           )}
         </header>
       </div>
       {/* Contact Us button */}
-      <a
-        ref={contactButtonRef}
-        className='contact-us-btn'
-        href='#footer'
-      >
-        <span className='absolute'>Le llamaremos</span>
+      <a ref={contactButtonRef} className="contact-us-btn" href="#footer">
+        <span className="absolute">Le llamaremos</span>
       </a>
-
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

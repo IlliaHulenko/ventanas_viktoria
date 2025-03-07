@@ -5,28 +5,28 @@ import { useNavigate } from 'react-router-dom'
 const WindowsPage = () => {
 
     // Animated route to products page
-      const navigator = useNavigate();
-    
-      function routeToProducts() {
+    const navigator = useNavigate();
+
+    function routeToProducts() {
         if (!document.startViewTransition) {
-          navigator('/products');
-          return;
+            navigator('/products');
+            return;
         }
-    
+
         document.startViewTransition(() => navigator('/products'))
-      }
+    }
 
     return (
         <section id='ventanas' className='flex flex-col justify-center items-center my-5 p-10'>
             <h1 className='text-2xl md:text-4xl font-general m-8 '>Nuestras ventanas</h1>
             {/* Double sheets windows */}
-            <div 
+            <div
                 className="grid grid-cols-[repeat(12,minmax(1,1fr))] grid-rows-1 md:grid-rows-4 mx-auto py-4 sm:grid-cols-6 sm:gap-2 md:p-4 bg-gray-200 rounded-lg shadow-lg mb-6"
             >
                 <div className="col-span-12 row-span-1 mt-2 md:col-span-2 md:row-span-4 place-items-center self-center">
-                    <img 
-                        src={import.meta.env.BASE_URL + "/img/ventana_de_doble_hoja.png"} 
-                        alt="ventana de doble hoja" 
+                    <img
+                        src={import.meta.env.BASE_URL + "/img/ventana_de_doble_hoja.png"}
+                        alt="ventana de doble hoja"
                         className="w-full max-w-xs md:max-w-md rounded-lg"
                     />
                 </div>
@@ -63,13 +63,13 @@ const WindowsPage = () => {
             </div>
 
             {/* Triple sheets windows */}
-            <div 
+            <div
                 className="grid grid-cols-[repeat(12,minmax(1,1fr))] grid-rows-1  md:grid-rows-4 mx-auto py-4 sm:grid-cols-6 sm:gap-2 md:p-4 bg-green-200 rounded-lg shadow-lg"
             >
                 <div className="col-span-12 row-span-1 mt-2 md:col-span-2 md:row-span-4 place-items-center self-center">
-                    <img 
-                        src={import.meta.env.BASE_URL + '/img/ventana_de_triple_hoja.png'} 
-                        alt="ventana de triple hoja" 
+                    <img
+                        src={import.meta.env.BASE_URL + '/img/ventana_de_triple_hoja.png'}
+                        alt="ventana de triple hoja"
                         className="w-full max-w-xs md:max-w-md rounded-lg"
                     />
                 </div>
@@ -104,16 +104,16 @@ const WindowsPage = () => {
                     <p className='p-4 text-lg font-robert-medium text-blue-600'>de 558 Euro(+ IVA)</p>
                 </div>
             </div>
-            
+
             {/* Correderas doors */}
             <h1 className='text-2xl md:text-4xl font-general m-8 '>Puertas correderas</h1>
-            <div 
+            <div
                 className="grid grid-cols-[repeat(16,minmax(1,1fr))] grid-rows-1 md:grid-rows-4 mx-auto py-4 sm:grid-cols-8 sm:gap-2 md:p-4 bg-[#2596be]/30 rounded-lg shadow-lg"
             >
                 <div className="col-span-12 row-span-1 mt-2 md:col-span-2 md:row-span-4 place-items-center self-center">
-                    <img 
-                        src={import.meta.env.BASE_URL + '/img/puerta_corredera.png'} 
-                        alt="Puerta corredera" 
+                    <img
+                        src={import.meta.env.BASE_URL + '/img/puerta_corredera.png'}
+                        alt="Puerta corredera"
                         className="w-full max-w-xs md:max-w-md rounded-lg"
                     />
                 </div>
@@ -161,22 +161,22 @@ const WindowsPage = () => {
                 <div className="col-span-6 row-span-1 md:col-span-1 md:col-start-8 md:row-span-2 md:row-start-4 place-items-start self-center">
                     <p className='p-4 text-lg font-robert-medium text-blue-600'>de 5651 Euro(+ IVA)</p>
                 </div>
-            </div>             
-            
-            <div                 
+            </div>
+
+            <div
                 onClick={routeToProducts}
                 className='flex justify-center m-8 w-full'
             >
-                <Button 
+                <Button
                     containerClass='bg-gradient-to-r from-[#287233] to-[#07dfd9] text-white 
                     focus:ring-4 focus:outline-none focus:ring-blue-300 font-large rounded-lg 
                     px-5 py-2.5 text-center flex items-center justify-center gap-3 md:w-[40%] sm:w-full h-14
                     drop-shadow-md hover:drop-shadow-xl ease-out hover:translate-y-1 transition-all rounded
-                    '                     
+                    '
                     title={'Ver todos los productos'}
-                />            
+                />
             </div>
-            
+
         </section>
     )
 }

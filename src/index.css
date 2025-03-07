@@ -62,22 +62,21 @@ body {
     width: 8rem;
     height: 4rem;
     position: fixed;
-    bottom: 20px;
-    left: 24px;
+    bottom: 2rem;
+    left: 0.8rem;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: inherit;
     font-weight: 500;
-    font-size: 16px;
-    padding: 0.7em 1.4em 0.7em 1.1em;
-    color: white;
-    background: #ad5389;
-    background: linear-gradient(0deg, rgba(20, 167, 62, 1) 0%, rgba(102, 247, 113, 1) 100%);
+    font-size: 1rem;
+    padding: 0.7rem 1.4rem 0.7rem 1.1rem;
+    color: white;    
+    background: linear-gradient(0deg, #287233 0%, #07dfd9 100%);
     border: none;
-    box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
-    letter-spacing: 0.05em;
-    border-radius: 20em;
+    box-shadow: 0 0.7rem 1.5rem -0.5rem #14a73e98;
+    letter-spacing: 0.05rem;
+    border-radius: 0.5rem;
     cursor: pointer;
     user-select: none;
     -webkit-user-select: none;
@@ -91,6 +90,35 @@ body {
 
   .contact-us-btn:active {
     box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+  }
+
+  /* Back button styles */  
+  .product-detail-back-button {
+    position: sticky;  
+    top: 9rem;
+    left: 5rem;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background: none;
+    color: #0018a8;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font: 800;
+    z-index: 50;
+  
+    span {
+      margin-right: 0.5rem;
+      font-size: 1rem;
+    }  
+  
+    @media screen and (max-width: 640px) {      
+      padding: 1rem 0;     
+    }
   }
 
   .absolute-center {
@@ -111,7 +139,7 @@ body {
   }
 
   .hero-heading {
-    @apply uppercase font-zentry font-black text-5xl sm:right-10 sm:text-7xl md:text-9xl lg:text-[12rem];
+    @apply uppercase font-zentry font-black text-5xl sm:right-10 text-[clamp(2rem,12vw,30rem)];
   }
 
   .about-subtext {
@@ -346,7 +374,7 @@ body {
   .hamburger-menu span {
     height: 0.3rem;
     width: 100%;
-    background: linear-gradient(45deg, #00c6ff, #0072ff);
+    background: linear-gradient(45deg, #287233, #07dfd9);
     border-radius: 1.5rem;
     position: absolute;
     top: 50%;
@@ -460,7 +488,7 @@ body {
     navigation: auto;
   }
 
-  ::view-transition-old(root) {
+  /* ::view-transition-old(root) {
     animation: 0.8s ease-in-out both move-out;
   }
 
@@ -485,6 +513,42 @@ body {
 
     to {
       transform: translateX(0%);
+    }
+  } */
+
+  ::view-transition-old(root) {
+    animation: 0.4s ease-out both blur-out;
+  }
+
+  ::view-transition-new(root) {
+    animation: 0.4s ease-out both blur-in;
+  }
+
+  @keyframes blur-out {
+    from {
+      filter: blur(0px);
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    to {
+      filter: blur(20px);
+      transform: scale(1.2);
+      opacity: 0;
+    }
+  }
+
+  @keyframes blur-in {
+    from {
+      filter: blur(20px);
+      transform: scale(1.2);
+      opacity: 0;
+    }
+
+    to {
+      filter: blur(0px);
+      transform: scale(1);
+      opacity: 1;
     }
   }
 
