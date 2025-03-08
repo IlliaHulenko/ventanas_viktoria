@@ -1,6 +1,6 @@
 import React from 'react'
-import AnimatedTitle from './AnimatedTitle'
-import ContactForm from './ContactForm'
+import AnimatedTitle from '../components/AnimatedTitle'
+import ContactForm from '../components/ContactForm'
 
 const ImageClipBox = ({src, clipClass}) => (
   <div className={clipClass}>

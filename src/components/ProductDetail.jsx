@@ -5,7 +5,7 @@ import Button from './Button';
 import Footer from './Footer';
 import Modal from './Modal';
 import ContactForm from './ContactForm';
-import Page404 from './Page404';
+import Page404 from '../pages/Page404';
 
 
 const ProductDetail = () => {

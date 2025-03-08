@@ -1,15 +1,25 @@
-import React from 'react'
+import React, {lazy, Suspense} from 'react'
 import Navbar from './components/Navbar'
-import Products from './components/Products'
+import Products from './pages/Products'
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import ProductDetail from './components/ProductDetail'
-import Hero from './components/Hero'
-import About from './components/About'
-import Features from './components/Features'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import WindowsPage from './components/WindowsPage'
-import Page404 from './components/Page404'
+import LoaderSpinner from './components/LoaderSpinner'
+// import Hero from './pages/Hero'
+// import About from './components/About'
+// import Features from './pages/Features'
+// import Contact from './pages/Contact'
+// import Footer from './components/Footer'
+// import WindowsPage from './pages/WindowsPage'
+// import Page404 from './pages/Page404'
+
+const Hero = lazy(() => import('./pages/Hero'));
+const About = lazy(() => import('./pages/About'));
+const Features = lazy(() => import('./pages/Features'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Footer = lazy(() => import('./components/Footer'));
+const WindowsPage = lazy(() => import('./pages/WindowsPage'));
+const Page404 = lazy(() => import('./pages/Page404'));
+
 
 const App = () => {
 
@@ -18,31 +28,33 @@ const App = () => {
 
       <Router basename={import.meta.env.BASE_URL}>
         <Navbar />
-        <Routes>          
-          <Route
-            path='/'
-            element={
-              <>                
-                <ScrollableContent> {/* Wrap scrollable content */}
-                  <Hero />
-                  <About />
-                  <Features />
-                  <WindowsPage />
-                  <Contact />
-                  <Footer />
-                </ScrollableContent>
-              </>
-            }
-          />
-          <Route path='/nosotros' element={<About />} />
-          <Route path='/ventajas' element={<Features />} />
-          <Route path='/ventanas' element={<WindowsPage />} />
-          <Route path='/contactos' element={<Contact />} />
-          <Route path='/footer' element={<Footer />} />
-          <Route path='/products' element={<Products />} />
-          <Route path='/products/:slug' element={<ProductDetail />} />
-          <Route path='*' element={<Page404 />} />
-        </Routes>
+        <Suspense fallback={<LoaderSpinner />}>        
+          <Routes>          
+            <Route
+              path='/'
+              element={
+                <>                
+                  <ScrollableContent> {/* Wrap scrollable content */}
+                    <Hero />
+                    <About />
+                    <Features />
+                    <WindowsPage />
+                    <Contact />
+                    <Footer />
+                  </ScrollableContent>
+                </>
+              }
+            />
+            <Route path='/nosotros' element={<About />} />
+            <Route path='/ventajas' element={<Features />} />
+            <Route path='/ventanas' element={<WindowsPage />} />
+            <Route path='/contactos' element={<Contact />} />
+            <Route path='/footer' element={<Footer />} />
+            <Route path='/products' element={<Products />} />
+            <Route path='/products/:slug' element={<ProductDetail />} />
+            <Route path='*' element={<Page404 />} />
+          </Routes>
+        </Suspense>
       </Router>
     </main>
   )

@@ -1,8 +1,8 @@
 import React from 'react'
-import AnimatedTitle from './AnimatedTitle';
-import ProductCart from './ProductCart.jsx';
+import AnimatedTitle from '../components/AnimatedTitle.jsx';
+import ProductCart from '../components/ProductCart.jsx';
 import { windows } from '../constants/index';
-import Footer from './Footer.jsx';
+import Footer from '../components/Footer.jsx';
 
 
 const Products = () => {

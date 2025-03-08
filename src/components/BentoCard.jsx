@@ -5,6 +5,7 @@ const BentoCard = ({ src, title, description}) => {
     <div id='ventajas' className='relative size-full'>
         <video 
             src={src}
+            loading='lazy'
             loop
             muted
             autoPlay

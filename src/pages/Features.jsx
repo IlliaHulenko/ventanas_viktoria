@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
-import BentoCard from './BentoCard'
-import BentoTilt from './BentoTilt'
+import BentoCard from '../components/BentoCard'
+import BentoTilt from '../components/BentoTilt'
 
 
 const Features = () => {

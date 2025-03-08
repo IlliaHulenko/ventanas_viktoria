@@ -21,8 +21,14 @@ const Navbar = () => {
       navigator('/products');
       return;
     }
-
     document.startViewTransition(() => navigator('/products'));
+  }
+  function routeToHomePage() {
+    if (!document.startViewTransition) {
+      navigator('/');
+      return;
+    }
+    document.startViewTransition(() => navigator('/'));
   }
 
   // Appearing and disappearing logic of a navbar
@@ -100,18 +106,21 @@ const Navbar = () => {
           <nav className="flex size-full items-center justify-between p-4">
             {/* Navbar's left side */}
             <div className="flex items-center gap-7">
-              <Link
-                to="/"
-                className="flex items-center w-fit h-fit bg-gradient-to-r from-[#287233] to-[#07dfd9] rounded-lg"
-              >
-                <img
-                  src={import.meta.env.BASE_URL + '/img/logo_viktoria_ventanas.png'}
-                  alt="logo"
-                  className="w-20"
-                />
-              </Link>
+              {/* Logo */}
+              <div onClick={() => routeToHomePage()}>
+                <Link
+                  to="/"
+                  className="flex items-center w-fit h-fit bg-gradient-to-r from-[#287233] to-[#07dfd9] rounded-lg"
+                >
+                  <img
+                    src={import.meta.env.BASE_URL + '/img/logo_viktoria_ventanas.png'}
+                    alt="logo"
+                    className="w-20"
+                  />
+                </Link>
+              </div>
               {!isProductPage && (
-                <div onClick={routeToProducts}>
+                <div onClick={() => routeToProducts()}>
                   <Button
                     id="product-button"
                     title="Productos"

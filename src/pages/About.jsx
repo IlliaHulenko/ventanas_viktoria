@@ -3,8 +3,8 @@ import gsap from 'gsap';
 import React, { useRef } from 'react';
 
 import { ScrollTrigger } from 'gsap/all';
-import AnimatedTitle from './AnimatedTitle';
-import AnimatedParagraph from './AnimatedParagraph';
+import AnimatedTitle from '../components/AnimatedTitle';
+// import AnimatedParagraph from './AnimatedParagraph';
 
 gsap.registerPlugin(ScrollTrigger);
 
