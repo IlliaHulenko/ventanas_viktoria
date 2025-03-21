@@ -105,10 +105,10 @@ body {
     cursor: pointer;
     border: none;
     background: none;
-    color: #0018a8;
+    color: black;
     text-transform: uppercase;
     font-size: 1rem;
-    font: 800;
+    font: 900;
     z-index: 50;
   
     span {
@@ -139,11 +139,11 @@ body {
   }
 
   .hero-heading {
-    @apply uppercase font-zentry font-black text-5xl sm:right-10 text-[clamp(2rem,12vw,30rem)];
+    @apply uppercase font-robert-regular font-black text-5xl sm:right-10 text-[clamp(3rem,5vw+1rem,22rem)];
   }
 
   .about-subtext {
-    @apply absolute bottom-[-80dvh] left-1/2 w-full max-w-96 -translate-x-1/2 text-center font-circular-web text-lg md:max-w-[34rem];
+    @apply absolute bottom-[-80dvh] left-1/2 w-full max-w-96 -translate-x-1/2 text-center font-robert-regular text-lg md:max-w-[34rem];
   }
 
   .about-image {

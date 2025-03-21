@@ -1,17 +1,17 @@
-import React, { useRef, useState } from 'react'
+import React from 'react'
 import BentoCard from '../components/BentoCard'
 import BentoTilt from '../components/BentoTilt'
 
 
 const Features = () => {
   return (
-    <section className='bg-black pb-52'>
-        <div className='container mx-auto px-3 md:px-10'>
-            <div className='px-5 py-32'>
-                <p className='font-circular-web text-3xl text-blue-50 mb-3'>
+    <section className=''>
+        <div className='container mx-auto px-3 md:px-10 pb-10'>
+            <div className='px-5 py-24'>
+                <p className='font-robert-regular text-3xl text-black mb-3'>
                 Ventanas de PVC: La Solución Perfecta para tu Hogar
                 </p>
-                <p className='max-w-md font-circular-web text-lg text-blue-100 opacity-50'>
+                <p className='max-w-md font-robert-regular text-lg text-black opacity-50'>
                     Si estás buscando mejorar la eficiencia energética, el confort y el diseño de tu hogar, 
                     las ventanas de PVC son la opción ideal. En esta guía te explicamos por qué elegir ventanas 
                     de PVC puede ser la mejor decisión para tu hogar y cómo puedes beneficiarte de nuestras 

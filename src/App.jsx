@@ -4,13 +4,6 @@ import Products from './pages/Products'
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import ProductDetail from './components/ProductDetail'
 import LoaderSpinner from './components/LoaderSpinner'
-// import Hero from './pages/Hero'
-// import About from './components/About'
-// import Features from './pages/Features'
-// import Contact from './pages/Contact'
-// import Footer from './components/Footer'
-// import WindowsPage from './pages/WindowsPage'
-// import Page404 from './pages/Page404'
 
 const Hero = lazy(() => import('./pages/Hero'));
 const About = lazy(() => import('./pages/About'));
@@ -25,7 +18,6 @@ const App = () => {
 
   return (
     <main className='relative flex flex-col min-h-screen w-screen overflow-x-hidden overflow-y-auto '>
-
       <Router basename={import.meta.env.BASE_URL}>
         <Navbar />
         <Suspense fallback={<LoaderSpinner />}>        

@@ -16,8 +16,8 @@ const Products = () => {
         <>
             <div className='mt-20 mb-12'>
                 <div className='container mx-auto'>
-                    <div className='text-center mb-10 max-w-[80%] mx-auto'>
-                        <h2 className='font-general text-sm uppercase md:text-[12px]'>
+                    <div className='text-center my-10 max-w-[80%] mx-auto'>
+                        <h2 className='font-robert-regular text-2xl uppercase md:text-2xl'>
                             Ventanas de toda gama
                         </h2>
 
@@ -30,7 +30,7 @@ const Products = () => {
                         <div>
                             {windowsTypes.map(type => (
                                 <div key={type}>
-                                    <h3 className='mt-10 font-general text-sm uppercase md:text-xl'>
+                                    <h3 className='my-10 font-robert-regular text-xl uppercase md:text-2xl'>
                                         {type}
                                     </h3>
                                     <div className='grid grid-cols-1 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-3 place-items-center gap-5 py-5 w-full'>

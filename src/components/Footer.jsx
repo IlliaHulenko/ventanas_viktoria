@@ -15,9 +15,9 @@ const Footer = () => {
     return (
         <footer id='footer' className='w-screen relative bg-gray-500 py-4 text-black flex flex-col items-center justify-around'>
             <div
-                className='container mx-auto flex flex-col items-center justify-around gap-6 px-4 py-4 md:flex-row'
+                className='container w-[90%] lg:w-screen mx-auto flex flex-col items-center justify-around gap-6 px-4 py-4 md:flex-row'
             >
-                <div className='flex flex-col items-cstart justify-between gap-6 text-2xl md:text-xl sm:py-4'>
+                <div className='flex flex-col items-start justify-between gap-6 text-xl md:text-2xl sm:py-4'>
                     <div className='flex flex-row gap-2'>
                         <PiHeadsetBold className='text-3xl text-blue-800' />
                         <a href='tel:+34 643 733 066'>+34 643 733 066</a>

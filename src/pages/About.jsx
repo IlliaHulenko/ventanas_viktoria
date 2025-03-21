@@ -37,7 +37,7 @@ const About = () => {
     return (
         <div id='nosotros' className='min-h-screen w-screen'>
             <div className='relative mb-8 mt-36 flex flex-col items-center gap-5'>
-             <h2 className='font-general text-sm uppercase md:text-[10px]'>
+             <h2 className='font-robert-regular text-sm uppercase md:text-xl lg:text-2xl text-center'>
                 Ventanas de alta calidad
              </h2>
 

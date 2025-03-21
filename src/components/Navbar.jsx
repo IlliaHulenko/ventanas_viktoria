@@ -110,7 +110,7 @@ const Navbar = () => {
               <div onClick={() => routeToHomePage()}>
                 <Link
                   to="/"
-                  className="flex items-center w-fit h-fit bg-gradient-to-r from-[#287233] to-[#07dfd9] rounded-lg"
+                  className="flex items-center w-fit h-fit bg-gradient-to-r from-[#287233] to-[#07dfd9] rounded-lg hover:scale-110 ease-out duration-500 transition-all hover:shadow-lg hover:shadow-[#07dfd9] "
                 >
                   <img
                     src={import.meta.env.BASE_URL + '/img/logo_viktoria_ventanas.png'}
@@ -123,9 +123,9 @@ const Navbar = () => {
                 <div onClick={() => routeToProducts()}>
                   <Button
                     id="product-button"
-                    title="Productos"
+                    title="Ventanas"
                     rightIcon={<GiWindow />}
-                    containerClass="bg-blue-50 md:flex hidden items-center justify-center gap-1 rounded-lg"
+                    containerClass="bg-[#0018a8] text-[#FFD100] md:flex hidden items-center justify-center gap-1 rounded-lg hover:bg-[#FFD100] hover:text-[#0018a8] ease-out hover:scale-110 duration-500 transition-all" 
                   />
                 </div>
               )}

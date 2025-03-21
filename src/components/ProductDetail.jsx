@@ -242,14 +242,14 @@ const ProductDetail = () => {
               }
               {product.maximum_sash_weight &&
                 <div className='flex flex-row items-start gap-4 my-2'>
-                  <p className='font-bold w-1/4'>Peso máximo de la hoja</p>
-                  <p className="leading-relaxed ml-2 w-3/4">{product.maximum_sash_weight}</p>
+                  <p className='font-bold w-1/2'>Peso máximo de la hoja</p>
+                  <p className="leading-relaxed w-1/2">{product.maximum_sash_weight}</p>
                 </div>
               }
               {product.slide_type &&
                 <div className='flex flex-row items-start gap-4 my-2'>
-                  <p className='font-bold w-1/4'>Tipo</p>
-                  <p className="leading-relaxed ml-2 w-3/4">{product.slide_type}</p>
+                  <p className='font-bold w-1/2'>Tipo</p>
+                  <p className="leading-relaxed w-1/2">{product.slide_type}</p>
                 </div>
               }
               {product.install_depth &&
@@ -266,80 +266,80 @@ const ProductDetail = () => {
               }
               {product.width_min &&
                 <div className='flex flex-row items-start gap-4 my-2'>
-                  <p className='font-bold w-1/4'>Ancho mínimo</p>
-                  <p className="leading-relaxed ml-2 w-3/4">{product.width_min}</p>
+                  <p className='font-bold w-1/2'>Ancho mínimo</p>
+                  <p className="leading-relaxed w-1/2">{product.width_min}</p>
                 </div>
               }
               {product.width_max_whites &&
                 <div className='flex flex-row items-start gap-4 my-2'>
-                  <p className='font-bold w-1/4'>Ancho máximo para blancos</p>
-                  <p className="leading-relaxed ml-2 w-3/4">{product.width_max_whites}</p>
+                  <p className='font-bold w-1/2'>Ancho máximo para blancos</p>
+                  <p className="leading-relaxed w-1/2">{product.width_max_whites}</p>
                 </div>
               }
               {product.width_max_coloreds &&
                 <div className='flex flex-row items-start gap-4 my-2'>
-                  <p className='font-bold w-1/4'>Ancho máximo para coloridos</p>
-                  <p className="leading-relaxed ml-2 w-3/4">{product.width_max_coloreds}</p>
+                  <p className='font-bold w-1/2'>Ancho máximo para coloridos</p>
+                  <p className="leading-relaxed w-1/2">{product.width_max_coloreds}</p>
                 </div>
               }
               {product.height_max_whites &&
                 <div className='flex flex-row items-start gap-4 my-2'>
-                  <p className='font-bold w-1/4'>Altura máxima para blancos</p>
-                  <p className="leading-relaxed ml-2 w-3/4">{product.height_max_whites}</p>
+                  <p className='font-bold w-1/2'>Altura máxima para blancos</p>
+                  <p className="leading-relaxed w-1/2">{product.height_max_whites}</p>
                 </div>
               }
               {product.height_max_coloreds &&
                 <div className='flex flex-row items-start gap-4 my-2'>
-                  <p className='font-bold w-1/4'>Altura máxima para coloridos</p>
-                  <p className="leading-relaxed ml-2 w-3/4">{product.height_max_coloreds}</p>
+                  <p className='font-bold w-1/2'>Altura máxima para coloridos</p>
+                  <p className="leading-relaxed w-1/2">{product.height_max_coloreds}</p>
                 </div>
               }
               {product.weight &&
                 <div className='flex flex-row items-start gap-4 my-2'>
-                  <p className='font-bold w-1/4'>Peso de la unidad de doble acristalamiento (Hoja)</p>
-                  <p className="leading-relaxed ml-2 w-3/4">{product.weight}</p>
+                  <p className='font-bold w-1/2'>Peso de la unidad de doble acristalamiento (Hoja)</p>
+                  <p className="leading-relaxed w-1/2">{product.weight}</p>
                 </div>
               }
               {product.height_min &&
                 <div className='flex flex-row items-start gap-4 my-2'>
-                  <p className='font-bold w-1/4'>Altura mínima por el marco</p>
-                  <p className="leading-relaxed ml-2 w-3/4">{product.height_min}</p>
+                  <p className='font-bold w-1/2'>Altura mínima por el marco</p>
+                  <p className="leading-relaxed w-1/2">{product.height_min}</p>
                 </div>
               }
               {product.width_min_scheme_a &&
                 <div className='flex flex-row items-start gap-4 my-2'>
-                  <p className='font-bold w-1/4'>Ancho mínimo por el marco Esquema A</p>
-                  <p className="leading-relaxed ml-2 w-3/4">{product.width_min_scheme_a}</p>
+                  <p className='font-bold w-1/2'>Ancho mínimo por el marco Esquema A</p>
+                  <p className="leading-relaxed w-1/2">{product.width_min_scheme_a}</p>
                 </div>
               }
               {product.width_min_scheme_k &&
                 <div className='flex flex-row items-start gap-4 my-2'>
-                  <p className='font-bold w-1/4'>Ancho mínimo por el marco Esquema K</p>
-                  <p className="leading-relaxed ml-2 w-3/4">{product.width_min_scheme_k}</p>
+                  <p className='font-bold w-1/2'>Ancho mínimo por el marco Esquema K</p>
+                  <p className="leading-relaxed w-1/2">{product.width_min_scheme_k}</p>
                 </div>
               }
               {product.width_min_scheme_c &&
                 <div className='flex flex-row items-start gap-4 my-2'>
-                  <p className='font-bold w-1/4'>Ancho mínimo por el marco Esquema C</p>
-                  <p className="leading-relaxed ml-2 w-3/4">{product.width_min_scheme_c}</p>
+                  <p className='font-bold w-1/2'>Ancho mínimo por el marco Esquema C</p>
+                  <p className="leading-relaxed w-1/2">{product.width_min_scheme_c}</p>
                 </div>
               }
               {product.width_max &&
                 <div className='flex flex-row items-start gap-4 my-2'>
-                  <p className='font-bold w-1/4'>Ancho máximo</p>
-                  <p className="leading-relaxed ml-2 w-3/4">{product.width_max}</p>
+                  <p className='font-bold w-1/2'>Ancho máximo</p>
+                  <p className="leading-relaxed w-1/2">{product.width_max}</p>
                 </div>
               }
               {product.height_min &&
                 <div className='flex flex-row items-start gap-4 my-2'>
-                  <p className='font-bold w-1/4'>Altura mínima</p>
-                  <p className="leading-relaxed ml-2 w-3/4">{product.height_min}</p>
+                  <p className='font-bold w-1/2'>Altura mínima</p>
+                  <p className="leading-relaxed w-1/2">{product.height_min}</p>
                 </div>
               }
               {product.height_max &&
                 <div className='flex flex-row items-start gap-4 my-2'>
-                  <p className='font-bold w-1/4'>Altura máxima</p>
-                  <p className="leading-relaxed ml-2 w-3/4">{product.height_max}</p>
+                  <p className='font-bold w-1/2'>Altura máxima</p>
+                  <p className="leading-relaxed w-1/2">{product.height_max}</p>
                 </div>
               }
 
@@ -389,8 +389,8 @@ const ProductDetail = () => {
             )}
           </div>
           <div className="flex flex-col mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
-            <span className="mr-3 mb-3 font-general text-lg md:text-2xl">Laminación de los sistemas de perfil:</span>
-            <div className="flex items-center flex-wrap">
+            <span className="mr-3 mb-3 font-robert-regular text-lg md:text-2xl">Laminación de los sistemas de perfil:</span>
+            <div className="flex items-center justify-center flex-wrap">
 
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
                 <img src={`${import.meta.env.BASE_URL}/img/windows_colors/10l-2_pine_tree1.jpg`} alt="Laminacion Pino" className="w-full max-w-xs md:max-w-md rounded-lg" />
@@ -506,20 +506,18 @@ const ProductDetail = () => {
             </div>
           </div>
 
-          <div className="flex mb-24">
-            {/* <span className="title-font font-medium text-2xl text-gray-900">{product.price}</span>                 */}
+          <div className="flex mb-20">
+            {/* <span className="title-font font-medium text-2xl text-gray-900">{product.price}</span> */}
             <div className='flex ml-auto'>
               <button
                 onClick={() => setOpen(true)}
-                className="text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded cursor-pointer"
+                className="bg-[#0018a8] text-[#FFD100] border-0 py-2 px-6 focus:outline-none hover:bg-[#FFD100] hover:text-[#0018a8] ease-out hover:scale-110 duration-500 transition-all rounded cursor-pointer"
               >
                 Solicitar precio
               </button>
             </div>
           </div>
-
         </div>
-
       </div>
       <Modal open={open} onClose={() => setOpen(false)} children={<ContactForm />} />
       <Footer />

@@ -17,8 +17,8 @@ const WindowsPage = () => {
     }
 
     return (
-        <section id='ventanas' className='flex flex-col justify-center items-center my-5 p-10'>
-            <h1 className='text-2xl md:text-4xl font-general m-8 '>Nuestras ventanas</h1>
+        <section id='ventanas' className='flex flex-col justify-center items-center p-10'>
+            <h1 className='text-2xl md:text-4xl font-robert-regular m-8 '>Nuestras ventanas</h1>
             {/* Double sheets windows */}
             <div
                 className="grid grid-cols-[repeat(12,minmax(1,1fr))] grid-rows-1 md:grid-rows-4 mx-auto py-4 sm:grid-cols-6 sm:gap-2 md:p-4 bg-gray-200 rounded-lg shadow-lg mb-6"
@@ -106,7 +106,7 @@ const WindowsPage = () => {
             </div>
 
             {/* Correderas doors */}
-            <h1 className='text-2xl md:text-4xl font-general m-8 '>Puertas correderas</h1>
+            <h1 className='text-2xl md:text-4xl font-robert-regular m-8'>Puertas correderas</h1>
             <div
                 className="grid grid-cols-[repeat(16,minmax(1,1fr))] grid-rows-1 md:grid-rows-4 mx-auto py-4 sm:grid-cols-8 sm:gap-2 md:p-4 bg-[#2596be]/30 rounded-lg shadow-lg"
             >
@@ -173,7 +173,7 @@ const WindowsPage = () => {
                     px-5 py-2.5 text-center flex items-center justify-center gap-3 md:w-[40%] sm:w-full h-14
                     drop-shadow-md hover:drop-shadow-xl ease-out hover:translate-y-1 transition-all rounded
                     '
-                    title={'Ver todos los productos'}
+                    title={'Ver todas las ventanas'}
                 />
             </div>
 
