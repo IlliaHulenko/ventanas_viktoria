@@ -1,71 +1,32 @@
-import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
-import React, { useRef } from 'react';
 
-import { ScrollTrigger } from 'gsap/all';
-import AnimatedTitle from '../components/AnimatedTitle';
-// import AnimatedParagraph from './AnimatedParagraph';
-
-gsap.registerPlugin(ScrollTrigger);
+import React from 'react';
 
 const About = () => {
-    const clipRef = useRef(null); // Create a ref for the #clip div
-    const maskRef = useRef(null); // Create a ref for the .mask-clip-path div
-
-    useGSAP(() => {
-        // This will now run AFTER the component renders
-        if (clipRef.current && maskRef.current) { // Check if the refs are attached to elements
-            const clipAnimation = gsap.timeline({
-                scrollTrigger: {
-                    trigger: clipRef.current, // Use the ref here
-                    start: "center center",
-                    end: "+=800 center",
-                    scrub: 0.5,
-                    pin: true,
-                    pinSpacing: true,
-                },
-            });
-
-            clipAnimation.to(maskRef.current, { // Use the ref here
-                width: "100vw",
-                height: "100vh",
-                borderRadius: 0,
-            });
-        }
-    }, []); // The empty dependency array ensures this runs only once after the first render
-
     return (
-        <div id='nosotros' className='min-h-screen w-screen'>
-            <div className='relative mb-8 mt-36 flex flex-col items-center gap-5'>
-             <h2 className='font-robert-regular text-sm uppercase md:text-xl lg:text-2xl text-center'>
-                Ventanas de alta calidad
-             </h2>
+        <div id='nosotros' className='h-calc(100dvh) md:min-h-screen w-screen mb-8 mt-16'>
+            <div className='flex flex-col items-center gap-1'>            
 
-             <AnimatedTitle 
-                 title='Descubre la mejor relación <br/> calidad-precio en el mercado'
-                 containerClass="mt-5 !text-black text-center"
-             />   
-            
-             <div className='about-subtext'>
-                 <p>Producción rápida</p>
-                 <p>
-                    La fabricación de estructuras es una ventaja significativa para nuestros clientes
+             <div className='w-[90vw] md:h-[80vh] md:w-full lg:h-[90vh] lg:w-full flex items-center justify-center'>
+                <img 
+                    src={import.meta.env.BASE_URL + "/img/about_back_ground.jpg"} 
+                    alt='Background of About page' 
+                    className='w-full h-full md:w-[80vw] md:h-[80vh] object-contain md:object-cover rounded-lg'
+                />
+             </div>
+
+             <div className='flex flex-col w-[90vw] md:w-[80vw] items-center justify-center p-2 mt-4'>                 
+                 <p className='text-lg md:text-xl text-justify '>
+                    Nuestra empresa Viktoria Ventanas tiene una amplia 
+                    experiencia en la venta e instalación de ventanas de PVC. 
+                    Colaboramos con una fábrica confiable que produce ventanas 
+                    con perfil VEKA y utilizamos herrajes alemanes WINKHAUS. 
+                    Ofrecemos una amplia gama de soluciones en diferentes 
+                    categorías de precio, desde opciones accesibles hasta 
+                    soluciones premium. Nuestra prioridad es la calidad, 
+                    la fiabilidad y la satisfacción del cliente.
                  </p>
              </div>            
-         </div>
-            <div className='h-dvh w-screen' id='clip' ref={clipRef}> {/* Attach the ref here */}
-                <div className='mask-clip-path about-image' ref={maskRef}> {/* Attach the ref here */}
-                    <img
-                        src='img/about.jpg'
-                        alt='Background image'
-                        className='absolute left-0 top-0 size-full object-cover'                        
-                    />
-                    {/* <AnimatedParagraph 
-                        paragraph='Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam perferendis minima dolores excepturi, <br/> dolor doloribus voluptates sequi veritatis explicabo temporibus animi inventore  quam possimus, odio asperiores molestias expedita. Eaque, veritatis.'
-                        containerClass='absolute left-[50%] top-[50%] transform -translate-x-1/2 -translate-y-1/2 text-center'
-                    />                     */}
-                </div>
-            </div>
+         </div>            
         </div>
     );
 }

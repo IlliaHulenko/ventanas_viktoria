@@ -1,5 +1,6 @@
 import React from 'react'
 import BentoCard from '../components/BentoCard'
+import BentoCardImg from '../components/BentoCardImg'
 import BentoTilt from '../components/BentoTilt'
 
 
@@ -7,11 +8,11 @@ const Features = () => {
   return (
     <section className=''>
         <div className='container mx-auto px-3 md:px-10 pb-10'>
-            <div className='px-5 py-24'>
-                <p className='font-robert-regular text-3xl text-black mb-3'>
+            <div className=' px-5 md:py-24 py-8'>
+                <p className='font-namu text-3xl text-black mb-3'>
                 Ventanas de PVC: La Solución Perfecta para tu Hogar
                 </p>
-                <p className='max-w-md font-robert-regular text-lg text-black opacity-50'>
+                <p className='max-w-md font-namu text-lg text-black opacity-50'>
                     Si estás buscando mejorar la eficiencia energética, el confort y el diseño de tu hogar, 
                     las ventanas de PVC son la opción ideal. En esta guía te explicamos por qué elegir ventanas 
                     de PVC puede ser la mejor decisión para tu hogar y cómo puedes beneficiarte de nuestras 
@@ -30,16 +31,16 @@ const Features = () => {
             <div className='grid h-[135vh] grid-cols-2 grid-rows-2 gap-7'>
                 
                 <BentoTilt className='bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2'>
-                    <BentoCard 
-                        src="videos/window_0.mp4"
+                    <BentoCardImg
+                        src={import.meta.env.BASE_URL + '/img/medidas_de_ventana.jpg'}                        
                         title="Producción rápida"
                         description="La fabricación de estructuras es una ventaja significativa para nuestros clientes"
                     />
                 </BentoTilt>  
 
                 <BentoTilt className='bento-tilt_1 row-span-1 ms-14 md:col-span-1 md:ms-0'>
-                    <BentoCard 
-                        src="videos/opened_window_1.mp4"
+                    <BentoCardImg
+                        src={import.meta.env.BASE_URL + '/img/entrega.jpg'}
                         title="Entrega a un cliente"
                         description="Proporcionamos la entrega de pedidos al cliente, así como directamente al lugar de instalación, la entrega está incluida en el precio"
                     />

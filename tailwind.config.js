@@ -8,10 +8,11 @@ export default {
     extend: {
       fontFamily:{
         zentry: ['zentry-regular', 'sans-serif'],
-        general: ['general', 'sans-serif'],
-        'circular-web': ['circular-web', 'sans-serif'],        
-        'robert-regular': ['robert-regular', 'sans-serif'],
-        'robert-medium': ['robert-medium', 'sans-serif'],
+        namu: ['namu', 'sans-serif'],
+        // general: ['general', 'sans-serif'],
+        // 'circular-web': ['circular-web', 'sans-serif'],        
+        // 'robert-regular': ['robert-regular', 'sans-serif'],
+        // 'robert-medium': ['robert-medium', 'sans-serif'],
       },
       colors: {
         blue: {

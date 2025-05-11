@@ -389,7 +389,7 @@ const ProductDetail = () => {
             )}
           </div>
           <div className="flex flex-col mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
-            <span className="mr-3 mb-3 font-robert-regular text-lg md:text-2xl">Laminación de los sistemas de perfil:</span>
+            <span className="mr-3 mb-3 font-namu text-lg md:text-2xl">Laminación de los sistemas de perfil:</span>
             <div className="flex items-center justify-center flex-wrap">
 
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">

@@ -139,11 +139,10 @@ const Hero = () => {
                 <div className='mt-24 px-5 sm:px-10'>
                     {/* <h1 className='hero-heading text-blue-100'>
                         CE
-                    </h1> */}
+                    </h1> */}                    
+                    <img src={import.meta.env.BASE_URL +'/img/CE-certificate.svg'} alt='Certificate CE' className='w-28 h-28 lg:w-36 lg:h-36' />
                     
-                    <img src={import.meta.env.BASE_URL +'/img/CE-certificate.svg'} alt='Certificate CE' className='w-24 h-24 lg:w-32 lg:h-32' />
-                    
-                    <p className='mb-5 max-w-64 lg:max-w-96 text-start font-robert-regular text-blue-100 md:text-xl lg:text-2xl'>
+                    <p className='mb-5 max-w-64 lg:max-w-96 text-start font-namu text-blue-100 md:text-xl lg:text-2xl'>
                         Los componentes de alta calidad certificados en la Unión Europea <br/>
                         garantizan la calidad, durabilidad y alto rendimiento de nuestras estructuras
                     </p>

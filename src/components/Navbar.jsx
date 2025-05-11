@@ -110,25 +110,15 @@ const Navbar = () => {
               <div onClick={() => routeToHomePage()}>
                 <Link
                   to="/"
-                  className="flex items-center w-fit h-fit bg-gradient-to-r from-[#287233] to-[#07dfd9] rounded-lg hover:scale-110 ease-out duration-500 transition-all hover:shadow-lg hover:shadow-[#07dfd9] "
+                  className="flex items-center w-fit h-fit rounded-lg hover:scale-110 ease-out duration-500 transition-all hover:shadow-lg hover:shadow-[#07dfd9] "
                 >
                   <img
-                    src={import.meta.env.BASE_URL + '/img/logo_viktoria_ventanas.png'}
+                    src={import.meta.env.BASE_URL + '/img/logo_Viktoria_Ventanas.png'}
                     alt="logo"
                     className="w-20"
                   />
                 </Link>
-              </div>
-              {!isProductPage && (
-                <div onClick={() => routeToProducts()}>
-                  <Button
-                    id="product-button"
-                    title="Ventanas"
-                    rightIcon={<GiWindow />}
-                    containerClass="bg-[#0018a8] text-[#FFD100] md:flex hidden items-center justify-center gap-1 rounded-lg hover:bg-[#FFD100] hover:text-[#0018a8] ease-out hover:scale-110 duration-500 transition-all" 
-                  />
-                </div>
-              )}
+              </div>              
             </div>
             {/* Navbar's right side */}
             <div className="flex h-full items-center">
@@ -158,6 +148,12 @@ const Navbar = () => {
                     className="nav-hover-btn"
                   >
                     Ventanas
+                  </Link>
+                  <Link
+                    onClick={() => routeToProducts()}
+                    className="nav-hover-btn"
+                  >
+                    Correderas
                   </Link>
                   <Link
                     onClick={() => handleScroll('contactos')}

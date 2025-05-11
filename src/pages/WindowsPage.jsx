@@ -18,7 +18,7 @@ const WindowsPage = () => {
 
     return (
         <section id='ventanas' className='flex flex-col justify-center items-center p-10'>
-            <h1 className='text-2xl md:text-4xl font-robert-regular m-8 '>Nuestras ventanas</h1>
+            <h1 className='text-2xl md:text-4xl font-namu m-8 '>Nuestras ventanas</h1>
             {/* Double sheets windows */}
             <div
                 className="grid grid-cols-[repeat(12,minmax(1,1fr))] grid-rows-1 md:grid-rows-4 mx-auto py-4 sm:grid-cols-6 sm:gap-2 md:p-4 bg-gray-200 rounded-lg shadow-lg mb-6"
@@ -42,29 +42,29 @@ const WindowsPage = () => {
                 </div>
 
                 <div className="col-span-6 row-span-1 md:col-span-1 md:row-span-2 md:col-start-4 md:row-start-2 place-items-start self-center">
-                    <p className='p-4 text-lg font-robert-medium'>Ventana Veka 70 AD</p>
+                    <p className='p-4 text-lg font-namu'>Ventana Veka 70 AD</p>
                 </div>
                 <div className="col-span-6 row-span-1 md:col-span-1 md:row-span-2 md:col-start-4 md:row-start-4 place-items-start self-center">
-                    <p className='p-4 text-lg font-robert-medium text-blue-600'>de 336 Euro(+ IVA)</p>
+                    <p className='p-4 text-lg font-namu text-[#287233]'>de 336 Euro(+ IVA)</p>
                 </div>
 
                 <div className="col-span-6 row-span-1 md:col-span-1 md:row-span-2 md:col-start-5 md:row-start-2 md:place-items-start self-center">
-                    <p className='p-4 text-lg font-robert-medium'>Ventana Veka IDEAL 4000</p>
+                    <p className='p-4 text-lg font-namu'>Ventana Veka IDEAL 4000</p>
                 </div>
                 <div className="col-span-6 row-span-1 md:col-span-1 md:row-span-2 md:col-start-5 md:row-start-4 place-items-start self-center">
-                    <p className='p-4 text-lg font-robert-medium text-blue-600'>de 363 Euro(+ IVA)</p>
+                    <p className='p-4 text-lg font-namu text-[#287233]'>de 363 Euro(+ IVA)</p>
                 </div>
                 <div className="col-span-6 row-span-1 md:col-span-1 md:row-span-2 md:col-start-6 md:row-start-2 md:place-items-start self-center">
-                    <p className='p-4 text-lg font-robert-medium'>Ventana Veka 76 AD</p>
+                    <p className='p-4 text-lg font-namu'>Ventana Veka 76 AD</p>
                 </div>
                 <div className="col-span-6 row-span-1 md:col-start-6 md:row-span-2 md:row-start-4 place-items-start self-center">
-                    <p className='p-4 text-lg font-robert-medium text-blue-600'>de 374 Euro(+ IVA)</p>
+                    <p className='p-4 text-lg font-namu text-[#287233]'>de 374 Euro(+ IVA)</p>
                 </div>
             </div>
 
             {/* Triple sheets windows */}
             <div
-                className="grid grid-cols-[repeat(12,minmax(1,1fr))] grid-rows-1  md:grid-rows-4 mx-auto py-4 sm:grid-cols-6 sm:gap-2 md:p-4 bg-green-200 rounded-lg shadow-lg"
+                className="grid grid-cols-[repeat(12,minmax(1,1fr))] grid-rows-1  md:grid-rows-4 mx-auto py-4 sm:grid-cols-6 sm:gap-2 md:p-4 bg-gray-200 rounded-lg shadow-lg"
             >
                 <div className="col-span-12 row-span-1 mt-2 md:col-span-2 md:row-span-4 place-items-center self-center">
                     <img
@@ -85,30 +85,30 @@ const WindowsPage = () => {
                 </div>
 
                 <div className="col-span-6 row-span-1 md:col-span-1 md:row-span-2 md:col-start-4 md:row-start-2 place-items-start self-center">
-                    <p className='p-4 text-lg font-robert-medium'>Ventana Veka 70 AD</p>
+                    <p className='p-4 text-lg font-namu'>Ventana Veka 70 AD</p>
                 </div>
                 <div className="col-span-6 row-span-1 md:col-span-1 md:row-span-2 md:col-start-4 md:row-start-4 place-items-start self-center">
-                    <p className='p-4 text-lg font-robert-medium text-blue-600'>de 501 Euro(+ IVA)</p>
+                    <p className='p-4 text-lg font-namu text-[#287233]'>de 501 Euro(+ IVA)</p>
                 </div>
 
                 <div className="col-span-6 row-span-1 md:col-span-1 md:row-span-2 md:col-start-5 md:row-start-2 md:place-items-start self-center">
-                    <p className='p-4 text-lg font-robert-medium'>Ventana Veka IDEAL 4000</p>
+                    <p className='p-4 text-lg font-namu'>Ventana Veka IDEAL 4000</p>
                 </div>
                 <div className="col-span-6 row-span-1 md:col-span-1 md:row-span-2 md:col-start-5 md:row-start-4 place-items-start self-center">
-                    <p className='p-4 text-lg font-robert-medium text-blue-600'>de 543 Euro(+ IVA)</p>
+                    <p className='p-4 text-lg font-namu text-[#287233]'>de 543 Euro(+ IVA)</p>
                 </div>
                 <div className="col-span-6 row-span-1 md:col-span-1 md:row-span-2 md:col-start-6 md:row-start-2 md:place-items-start self-center">
-                    <p className='p-4 text-lg font-robert-medium'>Ventana Veka 76 AD</p>
+                    <p className='p-4 text-lg font-namu'>Ventana Veka 76 AD</p>
                 </div>
                 <div className="col-span-6 row-span-1 md:col-start-6 md:row-span-2 md:row-start-4 place-items-start self-center">
-                    <p className='p-4 text-lg font-robert-medium text-blue-600'>de 558 Euro(+ IVA)</p>
+                    <p className='p-4 text-lg font-namu text-[#287233]'>de 558 Euro(+ IVA)</p>
                 </div>
             </div>
 
             {/* Correderas doors */}
-            <h1 className='text-2xl md:text-4xl font-robert-regular m-8'>Puertas correderas</h1>
+            <h1 className='text-2xl md:text-4xl font-namu m-8'>Puertas correderas</h1>
             <div
-                className="grid grid-cols-[repeat(16,minmax(1,1fr))] grid-rows-1 md:grid-rows-4 mx-auto py-4 sm:grid-cols-8 sm:gap-2 md:p-4 bg-[#2596be]/30 rounded-lg shadow-lg"
+                className="grid grid-cols-[repeat(16,minmax(1,1fr))] grid-rows-1 md:grid-rows-4 mx-auto py-4 sm:grid-cols-8 sm:gap-2 md:p-4 bg-gray-200 rounded-lg shadow-lg"
             >
                 <div className="col-span-12 row-span-1 mt-2 md:col-span-2 md:row-span-4 place-items-center self-center">
                     <img
@@ -129,37 +129,37 @@ const WindowsPage = () => {
                 </div>
 
                 <div className="col-span-6 row-span-1 md:col-span-1 md:row-span-2 md:col-start-4 md:row-start-2 place-items-start self-center">
-                    <p className='p-4 text-lg font-robert-medium'>Sistema corredera Veka SL 60</p>
+                    <p className='p-4 text-lg font-namu'>Sistema corredera Veka SL 60</p>
                 </div>
                 <div className="col-span-6 row-span-1 md:col-span-1 md:row-span-2 md:col-start-4 md:row-start-4 place-items-start self-center">
-                    <p className='p-4 text-lg font-robert-medium text-blue-600'>de 723 Euro(+ IVA)</p>
+                    <p className='p-4 text-lg font-namu text-[#287233]'>de 723 Euro(+ IVA)</p>
                 </div>
 
                 <div className="col-span-6 row-span-1 md:col-span-1 md:row-span-2 md:col-start-5 md:row-start-2 md:place-items-start self-center">
-                    <p className='p-4 text-lg font-robert-medium'>Sistema corredera Veka EKOSOL 70</p>
+                    <p className='p-4 text-lg font-namu'>Sistema corredera Veka EKOSOL 70</p>
                 </div>
                 <div className="col-span-6 row-span-1 md:col-span-1 md:row-span-2 md:col-start-5 md:row-start-4 place-items-start self-center">
-                    <p className='p-4 text-lg font-robert-medium text-blue-600'>de 1468 Euro(+ IVA)</p>
+                    <p className='p-4 text-lg font-namu text-[#287233]'>de 1468 Euro(+ IVA)</p>
                 </div>
 
                 <div className="col-span-6 row-span-1 md:col-span-1 md:row-span-2 md:col-start-6 md:row-start-2 md:place-items-start self-center">
-                    <p className='p-4 text-lg font-robert-medium'>Sistema corredera Veka WH DUO PORT 70</p>
+                    <p className='p-4 text-lg font-namu'>Sistema corredera Veka WH DUO PORT 70</p>
                 </div>
                 <div className="col-span-6 row-span-1 md:col-span-1 md:row-span-2 md:col-start-6 md:row-start-4 place-items-start self-center">
-                    <p className='p-4 text-lg font-robert-medium text-blue-600'>de 1608 Euro(+ IVA)</p>
+                    <p className='p-4 text-lg font-namu text-[#287233]'>de 1608 Euro(+ IVA)</p>
                 </div>
 
                 <div className="col-span-6 row-span-1 md:col-span-1 md:row-span-2 md:col-start-7 md:row-start-2 md:place-items-start self-center">
-                    <p className='p-4 text-lg font-robert-medium'>Sistema corredera Veka MOVE</p>
+                    <p className='p-4 text-lg font-namu'>Sistema corredera Veka MOVE</p>
                 </div>
                 <div className="col-span-6 row-span-1 md:col-span-1 md:col-start-7 md:row-span-2 md:row-start-4 place-items-start self-center">
-                    <p className='p-4 text-lg font-robert-medium text-blue-600'>de 2120 Euro(+ IVA)</p>
+                    <p className='p-4 text-lg font-namu text-[#287233]'>de 2120 Euro(+ IVA)</p>
                 </div>
                 <div className="col-span-6 row-span-1 md:col-span-1 md:row-span-2 md:col-start-8 md:row-start-2 md:place-items-start self-center">
-                    <p className='p-4 text-lg font-robert-medium'>Sistema corredera Veka MOTION 82 STANDART</p>
+                    <p className='p-4 text-lg font-namu'>Sistema corredera Veka MOTION 82 STANDART</p>
                 </div>
                 <div className="col-span-6 row-span-1 md:col-span-1 md:col-start-8 md:row-span-2 md:row-start-4 place-items-start self-center">
-                    <p className='p-4 text-lg font-robert-medium text-blue-600'>de 5651 Euro(+ IVA)</p>
+                    <p className='p-4 text-lg font-namu text-[#287233]'>de 5651 Euro(+ IVA)</p>
                 </div>
             </div>
 
