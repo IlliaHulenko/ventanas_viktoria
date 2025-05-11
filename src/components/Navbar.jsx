@@ -113,7 +113,7 @@ const Navbar = () => {
                   className="flex items-center w-fit h-fit rounded-lg hover:scale-110 ease-out duration-500 transition-all hover:shadow-lg hover:shadow-[#07dfd9] "
                 >
                   <img
-                    src={import.meta.env.BASE_URL + '/img/logo_Viktoria_Ventanas.png'}
+                    src={import.meta.env.BASE_URL + '/img/logo.svg'}
                     alt="logo"
                     className="w-24 h-24"
                   />
