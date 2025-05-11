@@ -115,7 +115,7 @@ const Navbar = () => {
                   <img
                     src={import.meta.env.BASE_URL + '/img/logo_Viktoria_Ventanas.png'}
                     alt="logo"
-                    className="w-20"
+                    className="w-24 h-24"
                   />
                 </Link>
               </div>              
