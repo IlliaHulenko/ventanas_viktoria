@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 
 const BentoTilt = ({ children, className = ''}) => {
 
@@ -25,7 +25,6 @@ const BentoTilt = ({ children, className = ''}) => {
     const handleMouseLeave = (e) => {
         setTransformStyle('');
     }
-
 
     return(
         <div 

@@ -343,7 +343,6 @@ const ProductDetail = () => {
                 </div>
               }
 
-
               {/* Common windows specifications which render conditionaly */}
               {product.developed &&
                 <div className='flex flex-row items-start gap-4 my-2'>
@@ -507,7 +506,6 @@ const ProductDetail = () => {
           </div>
 
           <div className="flex mb-20">
-            {/* <span className="title-font font-medium text-2xl text-gray-900">{product.price}</span> */}
             <div className='flex ml-auto'>
               <button
                 onClick={() => setOpen(true)}

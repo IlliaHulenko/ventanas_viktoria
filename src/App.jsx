@@ -1,4 +1,4 @@
-import React, {lazy, Suspense} from 'react'
+import {lazy, Suspense} from 'react'
 import Navbar from './components/Navbar'
 import Products from './pages/Products'
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react'
+import { useState } from 'react'
 import Button from './Button';
 import { RiMailSendLine } from "react-icons/ri";
 import emailjs from '@emailjs/browser';
@@ -6,9 +6,7 @@ import useAlert from './useAlert';
 import Alert from './Alert';
 
 const ContactForm = () => {
-
-    const formRef = useRef(null);
-    const[form, setForm] = useState({name: '', email: '', message: ''});
+    const [form, setForm] = useState({name: '', email: '', message: ''});
     const [isLoading, setIsLoading] = useState(false);
 
     const {alert, showAlert, hideAlert} = useAlert();
@@ -23,19 +21,19 @@ const ContactForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        setIsLoading(true);
-
+        setIsLoading(true);        
+        
         emailjs.send(
-            import.meta.env.VENTAS_VIKTORIA_EMAILJS_SERVICE_ID, //TODO: Change to your service ID
-            import.meta.env.VENTAS_VIKTORIA_EMAILJS_TEMPLATE_ID, //TODO: Change to your template ID
+            import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+            import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID, 
             {
                 from_name: form.name,
-                to_name: 'Viktoria', //Add your name
+                to_name: 'Viktoria', 
                 from_email: form.email,
-                to_email: 'ventanas_viktoria@example.com', //Add your email
+                to_email: 'viktoriaventanas@gmail.com', 
                 message: form.message,
             },
-            import.meta.env.VENTAS_VIKTORIA_EMAILJS_PUBLIC_KEY //TODO: Change to your public key
+            import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
         ).then(() => {
             setIsLoading(true);
             showAlert({show: true, text: 'Mensaje enviado correctamente', type: 'success'});
@@ -66,7 +64,6 @@ const ContactForm = () => {
                 className='lg:w-[80%] w-full flex flex-col gap-7 mt-14'
                 onSubmit={handleSubmit}
             >
-
                 <label className='text-black-500 font-semibold'>
                     Nombre
                     <input 
@@ -129,11 +126,8 @@ const ContactForm = () => {
                         onBlur={handleBlur}
                         disabled={isLoading}
                     />
-                </div>
-
-                
+                </div>                
             </form>
-
         </div>
     </section>
   )

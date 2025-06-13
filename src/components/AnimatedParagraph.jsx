@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import gsap from 'gsap';
 
 const AnimatedParagraph = ({paragraph, containerClass}) => {
@@ -26,7 +26,6 @@ const AnimatedParagraph = ({paragraph, containerClass}) => {
 
         return () => contextParagraph.revert();
     }, []);
-
 
   return (
     <div 

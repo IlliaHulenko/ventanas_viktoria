@@ -242,7 +242,7 @@ export const windows = [
     {
         id: 11,
         title: "ECOSOL 70",
-        type: "Sistemas correderos de PVC",
+        type: "Sistemas correderas de PVC",
         thermal_insulation: "2.3 W/m²K",
         thickness_outside_wall: "70 mm",
         tightness: "Protección contra el polvo",
@@ -266,7 +266,7 @@ export const windows = [
     {
         id: 12,
         title: "WH DUO PORT 160 S",
-        type: "Sistemas correderos de PVC",
+        type: "Sistemas correderas de PVC",
         slide_type: "S",
         maximum_sash_weight: "160",
         width_min: "660 mm",
@@ -296,7 +296,7 @@ export const windows = [
     {
         id: 13,
         title: "WH DUO PORT 160 Z",
-        type: "Sistemas correderos de PVC",
+        type: "Sistemas correderas de PVC",
         slide_type: "Z",
         maximum_sash_weight: "160",
         width_min: "660 mm",
@@ -326,7 +326,7 @@ export const windows = [
     {
         id: 14,
         title: "WH DUO PORT 200 Z",
-        type: "Sistemas correderos de PVC",
+        type: "Sistemas correderas de PVC",
         slide_type: "Z",
         maximum_sash_weight: "200",
         width_min: "1100 mm",
@@ -356,7 +356,7 @@ export const windows = [
     {
         id: 15,
         title: "WH DUO PORT PAS",
-        type: "Sistemas correderos de PVC",
+        type: "Sistemas correderas de PVC",
         slide_type: "",
         maximum_sash_weight: "200",
         width_min: "1100 mm",
@@ -386,7 +386,7 @@ export const windows = [
     {
         id: 16,
         title: "VEKA MOVE",
-        type: "Sistemas correderos de PVC",
+        type: "Sistemas correderas de PVC",
         width_max_whites: "4200 mm",
         width_max_coloreds: "3500 mm",
         height_max_whites: "2480 mm",
@@ -421,7 +421,7 @@ export const windows = [
     {
         id: 17,
         title: "VEKAMOTION 82 STANDART",
-        type: "Sistemas correderos de PVC",
+        type: "Sistemas correderas de PVC",
         width_max_whites: "",
         width_max_coloreds: "",
         height_max_whites: "",
@@ -459,7 +459,7 @@ export const windows = [
     {
         id: 18,
         title: "VEKAMOTION 82 MAX",
-        type: "Sistemas correderos de PVC",
+        type: "Sistemas correderas de PVC",
         width_max_whites: "",
         width_max_coloreds: "",
         height_max_whites: "",

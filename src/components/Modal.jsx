@@ -1,4 +1,3 @@
-import React from 'react'
 
 const Modal = ({open, onClose, children}) => {
   return (
@@ -19,8 +18,7 @@ const Modal = ({open, onClose, children}) => {
                 X
             </button>
             {children}
-        </div>
-        
+        </div>        
     </div>
   )
 }

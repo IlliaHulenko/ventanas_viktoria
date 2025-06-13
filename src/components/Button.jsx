@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Button = ({ id, type, title,  leftIcon, rightIcon, containerClass }) => {
   return (
     <button 

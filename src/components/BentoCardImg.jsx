@@ -1,11 +1,10 @@
-import React from 'react'
 
 const BentoCardImg = ({ src, title, description}) => {
   return (
     <div id='ventajas' className='relative size-full'>
         <img 
             src={src}            
-            className='absolute left-0 top-0 size-full object-cover object-center'
+            className='absolute left-0 top-0 size-full object-cover'
         />
         <div
             className='relative z-10 flex size-full flex-col justify-end items-center p-5 text-2xl text-blue-100'

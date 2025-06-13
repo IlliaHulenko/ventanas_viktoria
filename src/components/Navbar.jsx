@@ -1,6 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
-import Button from './Button';
-import { GiWindow } from 'react-icons/gi';
+import { useEffect, useRef, useState } from 'react';
 import { useWindowScroll } from 'react-use';
 import gsap from 'gsap';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
@@ -118,7 +116,7 @@ const Navbar = () => {
                     className="w-24 h-24"
                   />
                 </Link>
-              </div>              
+              </div>
             </div>
             {/* Navbar's right side */}
             <div className="flex h-full items-center">

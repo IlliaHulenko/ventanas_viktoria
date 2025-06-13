@@ -1,6 +1,4 @@
 import { useEffect, useRef, useState } from 'react'
-// import Button from './Button';
-// import { TiLocationArrow } from 'react-icons/ti';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/all";
@@ -37,9 +35,9 @@ const Hero = () => {
     }, [loadedVideos]);
 
     useGSAP(() => {
-        if(hasClicked){
-            gsap.set('#next-video', {visibility: 'visible'});
-                
+        if (hasClicked) {
+            gsap.set('#next-video', { visibility: 'visible' });
+
             gsap.to('#next-video', {
                 transformOrigin: 'center center',
                 scale: 1,
@@ -57,7 +55,7 @@ const Hero = () => {
                 ease: 'power1.inOut'
             })
         }
-    }, {dependencies: [currentIndex], revertOnUpdate: true});
+    }, { dependencies: [currentIndex], revertOnUpdate: true });
 
     useGSAP(() => {
         gsap.set('#video-frame', {
@@ -70,97 +68,87 @@ const Hero = () => {
             borderRadius: "0% 0% 0% 0%",
             ease: "power1.inOut",
             scrollTrigger: {
-              trigger: "#video-frame",
-              start: "center center",
-              end: "bottom center",
-              scrub: true,
+                trigger: "#video-frame",
+                start: "center center",
+                end: "bottom center",
+                scrub: true,
             },
-          });
+        });
     })
 
     const getVideoSrc = (index) => `videos/window-${index}.mp4`
 
 
-  return (    
-    <div id='inicio' className='relative h-dvh w-screen overflow-x-hidden'>
+    return (
+        <div id='inicio' className='relative h-dvh w-screen overflow-x-hidden'>
 
-        {isLoading && <LoaderSpinner />}
+            {isLoading && <LoaderSpinner />}
 
-        <div 
-            id='video-frame' 
-            className='relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75'
-        >
-            <div>
-                <div className='mask-clip-path absolute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg'>
-                    <div 
-                        onClick={handleMiniVdClick}
-                        className='origin-center scale-50 opacity-0 transition-all duration-500 ease-in 
+            <div
+                id='video-frame'
+                className='relative z-10 h-dvh w-screen overflow-hidden rounded-lg bg-blue-75'
+            >
+                <div>
+                    <div className='mask-clip-path absolute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg'>
+                        <div
+                            onClick={handleMiniVdClick}
+                            className='origin-center scale-50 opacity-0 transition-all duration-500 ease-in 
                             hover:scale-100 hover:opacity-100'
-                    >
-                        <video
-                            id='current-video' 
-                            ref={nextVideoRef}
-                            src={getVideoSrc(upcomingVideoIndex)}
-                            loading='lazy'
-                            loop
-                            muted
-                            autoPlay
-                            className='size-64 origin-center scale-150 object-cover object-center'
-                            onLoadedData={handleVideoLoad}
-                        />
+                        >
+                            <video
+                                id='current-video'
+                                ref={nextVideoRef}
+                                src={getVideoSrc(upcomingVideoIndex)}
+                                loading='lazy'
+                                loop
+                                muted
+                                autoPlay
+                                className='size-64 origin-center scale-150 object-cover object-center'
+                                onLoadedData={handleVideoLoad}
+                            />
+                        </div>
+                    </div>
+
+                    <video
+                        id='next-video'
+                        ref={nextVideoRef}
+                        src={getVideoSrc(currentIndex)}
+                        loop
+                        muted
+                        autoPlay
+                        className='absolute-center invisible absolute z-20 size-64
+                        object-cover object-center'
+                        onLoadedData={handleVideoLoad}
+                    />
+
+                    <video
+                        src={getVideoSrc(currentIndex === totalVideos - 1 ? 1 : currentIndex)}
+                        autoPlay
+                        loop
+                        muted
+                        className="absolute left-0 top-0 size-full object-cover object-center"
+                        onLoadedData={handleVideoLoad}
+                    />
+                </div>
+                <h1 className='hero-heading absolute bottom-5 right-5 z-40 text-blue-75'>
+                    Viktoria Ventanas
+                </h1>
+                <div className='absolute left-0 top-0 size-full z-40'>
+                    <div className='mt-24 px-5 sm:px-10'>
+                        <img src={import.meta.env.BASE_URL + '/img/CE-certificate.svg'} alt='Certificate CE' className='w-28 h-28 lg:w-36 lg:h-36' />
+
+                        <p className='mb-5 max-w-64 lg:max-w-96 text-start font-namu text-blue-100 md:text-xl lg:text-2xl'>
+                            Los componentes de alta calidad certificados en la Unión Europea <br />
+                            garantizan la calidad, durabilidad y alto rendimiento de nuestras estructuras
+                        </p>
                     </div>
                 </div>
-
-                <video 
-                    id='next-video'
-                    ref={nextVideoRef}
-                    src={getVideoSrc(currentIndex)}
-                    loop
-                    muted
-                    autoPlay
-                    className='absolute-center invisible absolute z-20 size-64
-                        object-cover object-center'
-                    onLoadedData={handleVideoLoad}
-                />
-
-                <video 
-                    src={getVideoSrc(currentIndex === totalVideos - 1 ? 1 : currentIndex)}
-                    autoPlay
-                    loop
-                    muted
-                    className="absolute left-0 top-0 size-full object-cover object-center"
-                    onLoadedData={handleVideoLoad}
-                />
             </div>
-            <h1 className='hero-heading absolute bottom-5 right-5 z-40 text-blue-75'>
+            <h1 className='special-font hero-heading absolute bottom-5 right-5 text-black'>
                 Viktoria Ventanas
             </h1>
-            <div className='absolute left-0 top-0 size-full z-40'>
-                <div className='mt-24 px-5 sm:px-10'>
-                    {/* <h1 className='hero-heading text-blue-100'>
-                        CE
-                    </h1> */}                    
-                    <img src={import.meta.env.BASE_URL +'/img/CE-certificate.svg'} alt='Certificate CE' className='w-28 h-28 lg:w-36 lg:h-36' />
-                    
-                    <p className='mb-5 max-w-64 lg:max-w-96 text-start font-namu text-blue-100 md:text-xl lg:text-2xl'>
-                        Los componentes de alta calidad certificados en la Unión Europea <br/>
-                        garantizan la calidad, durabilidad y alto rendimiento de nuestras estructuras
-                    </p>
-                    
-                    {/* <Button 
-                        id='watch-trailer' 
-                        title='Ver más' 
-                        leftIcon={<TiLocationArrow />} 
-                        containerClass="bg-yellow-300 flex-center gap-1"
-                    /> */}
-                </div>
-            </div>
         </div>
-        <h1 className='special-font hero-heading absolute bottom-5 right-5 text-black'>
-            Viktoria Ventanas
-        </h1>
-    </div>
-  )
+    )
 }
 
 export default Hero

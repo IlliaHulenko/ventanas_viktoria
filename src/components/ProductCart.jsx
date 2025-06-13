@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import {useNavigate} from "react-router-dom";
 
 
 const ProductCart = ({card}) => {
 
-    const { title, img, type, price, id, slug } = card;
+    const { title, img, type, id, slug } = card;
     
     const navigator = useNavigate();
 
@@ -13,7 +13,6 @@ const ProductCart = ({card}) => {
             navigator(`/products/${slug}`);
             return;
         }
-
         document.startViewTransition(()=> navigator(`/products/${slug}`))
     }
 
@@ -49,7 +48,6 @@ const ProductCart = ({card}) => {
             <h4 className='capitalize'>{title}</h4>
             <p>{type}</p>                                        
         </div>
-        {/* <p>{price}</p> */}
     </div>
   )
 }
