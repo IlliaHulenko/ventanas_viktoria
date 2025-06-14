@@ -25,7 +25,8 @@ const WindowsPage = () => {
             >
                 <div className="col-span-12 row-span-1 mt-2 md:col-span-2 md:row-span-4 place-items-center self-center">
                     <img
-                        src={import.meta.env.BASE_URL + "/img/ventana_de_doble_hoja.png"}
+                        src="/img/ventana_de_doble_hoja.png"
+                        /* src={import.meta.env.BASE_URL + "/img/ventana_de_doble_hoja.png"} */
                         alt="ventana de doble hoja"
                         className="w-full max-w-xs md:max-w-md rounded-lg"
                     />
@@ -68,7 +69,8 @@ const WindowsPage = () => {
             >
                 <div className="col-span-12 row-span-1 mt-2 md:col-span-2 md:row-span-4 place-items-center self-center">
                     <img
-                        src={import.meta.env.BASE_URL + '/img/ventana_de_triple_hoja.png'}
+                        src='/img/ventana_de_triple_hoja.png'
+                        /* src={import.meta.env.BASE_URL + '/img/ventana_de_triple_hoja.png'} */
                         alt="ventana de triple hoja"
                         className="w-full max-w-xs md:max-w-md rounded-lg"
                     />
@@ -112,7 +114,8 @@ const WindowsPage = () => {
             >
                 <div className="col-span-12 row-span-1 mt-2 md:col-span-2 md:row-span-4 place-items-center self-center">
                     <img
-                        src={import.meta.env.BASE_URL + '/img/puerta_corredera.png'}
+                        src='/img/puerta_corredera.png'
+                        /* src={import.meta.env.BASE_URL + '/img/puerta_corredera.png'} */
                         alt="Puerta corredera"
                         className="w-full max-w-xs md:max-w-md rounded-lg"
                     />

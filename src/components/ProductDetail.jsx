@@ -49,9 +49,14 @@ const ProductDetail = () => {
           <img
             src={
               Array.isArray(product?.img) && product.img.length > 0
-                ? `${import.meta.env.BASE_URL}/${product.img[0]}`
-                : `${import.meta.env.BASE_URL}/${product?.img}`
+                ? `/${product.img[0]}`
+                : `/${product?.img}`
             }
+            /* src={
+              Array.isArray(product?.img) && product.img.length > 0
+                ? `/${product.img[0]}`
+                : `/${product?.img}`
+            } */
             alt={product.title}
             className="w-full lg:w-1/2 h-fit bg-contain object-center border rounded-lg hover:scale-110 duration-500 ease-in cursor-pointer"
           />
@@ -364,8 +369,8 @@ const ProductDetail = () => {
               <div
                 className='origin-center scale-50 duration-500 ease-in'
               >
-                <video
-                  src={`${import.meta.env.BASE_URL}/${product.video}`}
+                <video                  
+                  src={`/${product.video}`}
                   loop
                   muted
                   autoPlay
@@ -379,7 +384,7 @@ const ProductDetail = () => {
                 {product.img.map((image, index) => (
                   <img
                     key={index}
-                    src={`${import.meta.env.BASE_URL}/${image}`}
+                    src={`/${image}`}
                     alt={product.title}
                     className="w-full max-w-xs md:max-w-md rounded-lg hover:scale-110 duration-500 ease-in cursor-pointer"
                   />
@@ -392,115 +397,115 @@ const ProductDetail = () => {
             <div className="flex items-center justify-center flex-wrap">
 
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/10l-2_pine_tree1.jpg`} alt="Laminacion Pino" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/10l-2_pine_tree1.jpg`} alt="Laminacion Pino" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/21l-2_light_oak1.jpg`} alt="Laminacion Roble claro" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/21l-2_light_oak1.jpg`} alt="Laminacion Roble claro" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/22l-2_birch_tree1.jpg`} alt="Laminacion Rustical" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/22l-2_birch_tree1.jpg`} alt="Laminacion Rustical" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/27l-2_mahogany1.jpg`} alt="Laminacion Caoba" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/27l-2_mahogany1.jpg`} alt="Laminacion Caoba" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/32s-2_titan1.jpg`} alt="Laminacion Titanio" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/32s-2_titan1.jpg`} alt="Laminacion Titanio" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/38s-2_scandinavian_grey1.jpg`} alt="Laminacion Gris escandinavo" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/38s-2_scandinavian_grey1.jpg`} alt="Laminacion Gris escandinavo" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/39l-2_black_brown1.jpg`} alt="Laminacion Negro marrón" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/39l-2_black_brown1.jpg`} alt="Laminacion Negro marrón" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/48s-2_ficus1-sq.jpg`} alt="Laminacion Ficus" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/48s-2_ficus1-sq.jpg`} alt="Laminacion Ficus" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/49l-2_swan_white1.jpg`} alt="Laminacion Blanco de cisne" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/49l-2_swan_white1.jpg`} alt="Laminacion Blanco de cisne" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/52l-2_pearl_white1.jpg`} alt="Laminacion Blanco nacarado" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/52l-2_pearl_white1.jpg`} alt="Laminacion Blanco nacarado" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/58d-2_antracite_dark_wood-sq.jpg`} alt="Laminacion Antracita árbol oscuro" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/58d-2_antracite_dark_wood-sq.jpg`} alt="Laminacion Antracita árbol oscuro" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/58l-2_anthracit_grey1.jpg`} alt="Laminacion Antracita gris" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/58l-2_anthracit_grey1.jpg`} alt="Laminacion Antracita gris" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/58l-2_antracite_grey_sq.jpg`} alt="Laminacion Antracita arenosa" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/58l-2_antracite_grey_sq.jpg`} alt="Laminacion Antracita arenosa" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/63l-2_sea_blue1.jpg`} alt="Laminacion Azul marino" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/63l-2_sea_blue1.jpg`} alt="Laminacion Azul marino" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/65l-2_forest_green1.jpg`} alt="Laminacion Verde silvestre" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/65l-2_forest_green1.jpg`} alt="Laminacion Verde silvestre" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/68l-2_autumn_red1.jpg`} alt="Laminacion Rojo de otoño" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/68l-2_autumn_red1.jpg`} alt="Laminacion Rojo de otoño" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/69l-2_chocolate_brown1.jpg`} alt="Laminacion Marrón chocolate" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/69l-2_chocolate_brown1.jpg`} alt="Laminacion Marrón chocolate" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/109d-2_siriy_slantseviy-sq.jpg`} alt="Laminacion Gris esquistoso" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/109d-2_siriy_slantseviy-sq.jpg`} alt="Laminacion Gris esquistoso" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/110l-2_cold_black-sq.jpg`} alt="Laminacion Negro frío" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/110l-2_cold_black-sq.jpg`} alt="Laminacion Negro frío" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/anteak-sq-1.jpg`} alt="Laminacion Antic" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/anteak-sq-1.jpg`} alt="Laminacion Antic" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/black-matte-512x512.jpg`} alt="Laminacion Negro mate" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/black-matte-512x512.jpg`} alt="Laminacion Negro mate" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/dj606-42_silver_cloud1.jpg`} alt="Laminacion Metalic plateado" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/dj606-42_silver_cloud1.jpg`} alt="Laminacion Metalic plateado" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/dub-terner-tofi_500x500.png`} alt="Laminacion Roble Terner tofi" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/dub-terner-tofi_500x500.png`} alt="Laminacion Roble Terner tofi" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/grey-matte-sq.jpg`} alt="Laminacion Gris mate" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/grey-matte-sq.jpg`} alt="Laminacion Gris mate" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/l108001_sheffield_oak1.jpg`} alt="Laminacion Roble Sheffield" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/l108001_sheffield_oak1.jpg`} alt="Laminacion Roble Sheffield" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/l107001_natural_oak1.jpg`} alt="Laminacion Roble natural" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/l107001_natural_oak1.jpg`} alt="Laminacion Roble natural" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/l106003_antracite1.jpg`} alt="Laminacion Antracita" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/l106003_antracite1.jpg`} alt="Laminacion Antracita" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/l104002_walnut1.jpg`} alt="Laminacion Nuez" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/l104002_walnut1.jpg`} alt="Laminacion Nuez" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/l103002_dark_cherry1.jpg`} alt="Laminacion Guinda oscura" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/l103002_dark_cherry1.jpg`} alt="Laminacion Guinda oscura" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/l102002_golden_oak_200x200.jpg`} alt="Laminacion Roble dorado" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/l102002_golden_oak_200x200.jpg`} alt="Laminacion Roble dorado" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/l101001_montana_oak1.jpg`} alt="Laminacion Roble Monatana" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/l101001_montana_oak1.jpg`} alt="Laminacion Roble Monatana" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/sk_f4703001_p_dyb_terner_mini.jpg`} alt="Laminacion Roble Terner" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/sk_f4703001_p_dyb_terner_mini.jpg`} alt="Laminacion Roble Terner" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/sk_f4703002_p_dyb_shefild_alpiiski_mini.jpg`} alt="Laminacion Roble Sheffield Alpino" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/sk_f4703002_p_dyb_shefild_alpiiski_mini.jpg`} alt="Laminacion Roble Sheffield Alpino" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/sk_f4703003_p_dyb_shefild_siryi_mini-1.jpg`} alt="Laminacion Roble Sheffield Gris" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/sk_f4703003_p_dyb_shefild_siryi_mini-1.jpg`} alt="Laminacion Roble Sheffield Gris" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/temno-siryy-alux_500x500-1.png`} alt="Laminacion Alux DB 703" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/temno-siryy-alux_500x500-1.png`} alt="Laminacion Alux DB 703" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/temno-siryy-alux_500x500.png`} alt="Laminacion Cuarzo" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/temno-siryy-alux_500x500.png`} alt="Laminacion Cuarzo" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
               <div className="border-2 border-gray-300/50 rounded-lg w-16 h-16 focus:outline-none">
-                <img src={`${import.meta.env.BASE_URL}/img/windows_colors/umbra-matte-sq.jpg`} alt="Laminacion Umbra mate" className="w-full max-w-xs md:max-w-md rounded-lg" />
+                <img src={`/img/windows_colors/umbra-matte-sq.jpg`} alt="Laminacion Umbra mate" className="w-full max-w-xs md:max-w-md rounded-lg" />
               </div>
             </div>
           </div>

@@ -22,7 +22,7 @@ const About = () => {
 
                 <div className='w-[90vw] md:h-[80vh] md:w-full lg:h-[90vh] lg:w-full flex items-center justify-center'>
                     <img
-                        src={import.meta.env.BASE_URL + "/img/about_us.jpg"}
+                        src="/img/about_us.jpg"
                         alt='Background of About page'
                         className='w-full h-full md:w-[80vw] md:h-[80vh] object-contain md:object-cover rounded-lg'
                     />

@@ -135,7 +135,8 @@ const Hero = () => {
                 </h1>
                 <div className='absolute left-0 top-0 size-full z-40'>
                     <div className='mt-24 px-5 sm:px-10'>
-                        <img src={import.meta.env.BASE_URL + '/img/CE-certificate.svg'} alt='Certificate CE' className='w-28 h-28 lg:w-36 lg:h-36' />
+                        <img src='/img/CE-certificate.svg' alt='Certificate CE' className='w-28 h-28 lg:w-36 lg:h-36' />
+                        {/* <img src={import.meta.env.BASE_URL + '/img/CE-certificate.svg'} alt='Certificate CE' className='w-28 h-28 lg:w-36 lg:h-36' /> */}
 
                         <p className='mb-5 max-w-64 lg:max-w-96 text-start font-namu text-blue-100 md:text-xl lg:text-2xl'>
                             Los componentes de alta calidad certificados en la Unión Europea <br />

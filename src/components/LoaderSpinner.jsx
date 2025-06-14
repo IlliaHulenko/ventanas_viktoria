@@ -5,7 +5,8 @@ const LoaderSpinner = () => {
             <div className="loader">
                 <div className="spinner" />
                 <img
-                    src={import.meta.env.BASE_URL + '/img/logo.svg'}
+                    //src={import.meta.env.BASE_URL + '/img/logo.svg'}
+                    src='/img/logo.svg'
                     alt="logo"
                     className="icon"
                 />

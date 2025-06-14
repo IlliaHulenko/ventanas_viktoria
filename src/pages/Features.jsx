@@ -30,7 +30,8 @@ const Features = () => {
                 
                 <BentoTilt className='bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2'>
                     <BentoCardImg
-                        src={import.meta.env.BASE_URL + '/img/medidas_de_ventana.jpg'}                        
+                        src='/img/medidas_de_ventana.jpg'                      
+                        /* src={import.meta.env.BASE_URL + '/img/medidas_de_ventana.jpg'} */                        
                         title="Producción rápida"
                         description="La fabricación de estructuras es una ventaja significativa para nuestros clientes"
                     />
@@ -38,7 +39,8 @@ const Features = () => {
 
                 <BentoTilt className='bento-tilt_1 row-span-1 ms-14 md:col-span-1 md:ms-0'>
                     <BentoCardImg
-                        src={import.meta.env.BASE_URL + '/img/entrega.jpg'}
+                        src='/img/entrega.jpg'
+                        /* src={import.meta.env.BASE_URL + '/img/entrega.jpg'} */
                         title="Entrega rápida a un cliente"
                         description="Proporcionamos la entrega de pedidos al cliente, así como directamente al lugar de instalación, la entrega está incluida en el precio"            
                     />

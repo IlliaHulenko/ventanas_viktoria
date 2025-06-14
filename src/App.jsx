@@ -18,7 +18,8 @@ const App = () => {
 
   return (
     <main className='relative flex flex-col min-h-screen w-screen overflow-x-hidden overflow-y-auto '>
-      <Router basename={import.meta.env.BASE_URL}>
+      {/* <Router basename={import.meta.env.BASE_URL}> */}
+      <Router>
         <Navbar />
         <Suspense fallback={<LoaderSpinner />}>        
           <Routes>          
